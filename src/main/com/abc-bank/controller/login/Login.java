@@ -6,12 +6,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 
-@WebServlet("/login")
+
+
 public class Login extends HttpServlet {
 
+    @Override
     public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
-        response.getWriter().println("Hello World!");
+
     }
 
 }
