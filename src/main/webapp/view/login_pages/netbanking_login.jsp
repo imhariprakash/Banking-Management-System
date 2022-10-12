@@ -1,5 +1,22 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
+<%@ page import="com.google.gson.JsonObject, com.google.gson.JsonParser, model.authentication.Login" %>
+
+<%
+    try{
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        if((username != null && password != null) && Login.isVerifiedUser(username, password)){
+            response.sendRedirect("index.jsp");
+        }
+        else if((username != null || password != null) || (username == "" || password == "")){
+            response.sendRedirect("/abc-bank/wrong-login-credentials");
+        }
+    }catch(Exception e){
+       response.sendRedirect("/abc-bank/wrong-login-credentials");
+    }
+%>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -69,7 +86,7 @@
                         placeholder=" Password">
                 </div>
                 <div class="center-text">
-                    <input type="submit" value="Login" class="btn">
+                    <input type="submit" class="btn">
                 </div>
             </form>
             <div>
