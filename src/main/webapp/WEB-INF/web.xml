@@ -22,13 +22,4 @@
 		<servlet-name>netbanking_bad_credentials</servlet-name>
 		<url-pattern>/wrong-login-credentials</url-pattern>
 	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>create-account</servlet-name>
-		<jsp-file>/view/.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>netbanking_home</servlet-name>
-		<url-pattern>/netbanking-home</url-pattern>
-	</servlet-mapping>
 </web-app>
