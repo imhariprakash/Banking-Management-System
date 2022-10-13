@@ -78,12 +78,12 @@
             <form action="login" method="post">
                 <div class="center-text top-margin">
                     <input type="text" name="username" id="username"
-                        placeholder=" User ID" class="input-properties">
+                        placeholder=" User ID" class="input-properties" required>
                 </div>
                 <div class="center-text top-margin">
                     <input type="password" name="password" id="password"
                         class="input-properties"
-                        placeholder=" Password">
+                        placeholder=" Password" required>
                 </div>
                 <div class="center-text">
                     <input type="submit" class="btn">
