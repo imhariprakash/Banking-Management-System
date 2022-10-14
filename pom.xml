@@ -47,6 +47,20 @@
 			<artifactId>mail</artifactId>
 			<version>1.4.7</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.courier/courier-java -->
+		<dependency>
+			<groupId>com.courier</groupId>
+			<artifactId>courier-java</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.twilio.sdk</groupId>
+			<artifactId>twilio</artifactId>
+			<version>9.0.1</version>
+		</dependency>
+	
 	
 	
 	

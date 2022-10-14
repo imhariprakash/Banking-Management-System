@@ -6,10 +6,8 @@ public class OTPGenerator {
     private OTPGenerator() {
     } // private constructor
 
-    static char[] OTP(int len)
+    static int OTP(int len)
     {
-        System.out.println("Generating OTP using random() : ");
-        System.out.print("You OTP is : ");
 
         // Using numeric values
         String numbers = "0123456789";
@@ -17,20 +15,19 @@ public class OTPGenerator {
         // Using random method
         Random rndm_method = new Random();
 
-        char[] otp = new char[len];
+        int otp = 0;
 
         for (int i = 0; i < len; i++)
         {
             // Use of charAt() method : to get character value
             // Use of nextInt() as it is scanning the value as int
-            otp[i] =
-                    numbers.charAt(rndm_method.nextInt(numbers.length()));
+            otp = otp * 10 + Integer.parseInt(String.valueOf(numbers.charAt(rndm_method.nextInt(numbers.length()))));
         }
-        return otp;
+        return(Integer.parseInt(String.valueOf(otp)));
     }
     public static int generate()
     {
         int length = 6;
-        System.out.println(OTP(length));
+        return (OTP(length));
     }
 }

@@ -22,4 +22,22 @@
 		<servlet-name>netbanking_bad_credentials</servlet-name>
 		<url-pattern>/wrong-login-credentials</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>"email otp"</servlet-name>
+		<servlet-class>controller.SendEmailOTP</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>"email otp"</servlet-name>
+		<url-pattern>/otp-email</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>"mobile otp"</servlet-name>
+		<servlet-class>controller.SendMobileOTP</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>"mobile otp"</servlet-name>
+		<url-pattern>/otp-mobile</url-pattern>
+	</servlet-mapping>
 </web-app>

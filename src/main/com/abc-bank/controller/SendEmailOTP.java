@@ -1,0 +1,36 @@
+package controller;
+
+import model.validation.EmailValidation;
+import model.validation.OTPGenerator;
+import model.mailings.EmailOTP;
+
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+public class SendEmailOTP extends HttpServlet {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        try{
+            JsonObject jsonObject = JsonParser.parseReader(request.getReader()).getAsJsonObject();
+            String email = jsonObject.get("email").getAsString();
+            if(EmailValidation.isValidEmail(email)) {
+                int otp = OTPGenerator.generate();
+                EmailOTP.sendEmail(email, otp);
+                response.setStatus(200);
+                response.setContentType("application/json");
+                response.getWriter().write("{\"message\": Successfully sent otp to the mail.\"}");
+            }
+
+        }catch(Exception e){
+            // TODO: handle exception
+            response.setStatus(400);
+            response.setContentType("application/json");
+            response.getWriter().write("{\"message\": \"Invalid email.\"}");
+        }
+    }
+}
