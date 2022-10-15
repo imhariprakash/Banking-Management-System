@@ -4,6 +4,7 @@
 
 <web-app>
 	<display-name>ABC Bank</display-name>
+	<description>ABC Bank</description>
 	
 	<servlet>
 		<servlet-name>login</servlet-name>
@@ -21,6 +22,33 @@
 	<servlet-mapping>
 		<servlet-name>netbanking_bad_credentials</servlet-name>
 		<url-pattern>/wrong-login-credentials</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>account-create</servlet-name>
+		<jsp-file>/view/register/create_account.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>account-create</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>account-create-success</servlet-name>
+		<jsp-file>/view/register/account_create_success.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>account-create-success</servlet-name>
+		<url-pattern>/account-create-success</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>password_reset</servlet-name>
+		<jsp-file>/view/reset_password</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>password_reset</servlet-name>
+		<url-pattern>/password-reset</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>

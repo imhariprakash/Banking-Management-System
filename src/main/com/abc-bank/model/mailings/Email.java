@@ -38,7 +38,7 @@ public class Email {
 
         try {
             SendEnhancedResponseBody response = new SendService().sendEnhancedMessage(sendEnhancedRequestBody);
-            System.out.println(response);
+            //System.out.println(response);
         } catch (IOException e) {
             e.printStackTrace();
         }
