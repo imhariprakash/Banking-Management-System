@@ -11,7 +11,13 @@ import java.io.IOException;
 import java.util.*;
 
 public class Email {
+
+    private Email() {
+    } // Prevents instantiation
+
+
     public static void send(String email, String subject, String body) {
+        //System.out.println("Email sent to " + email + " from model - Email.java");
         Courier.init("pk_prod_21F5MEP3Z4MVC0JQKJ7PGYZQCJTH");
 
         SendEnhancedRequestBody sendEnhancedRequestBody = new SendEnhancedRequestBody();
@@ -32,7 +38,7 @@ public class Email {
 
         try {
             SendEnhancedResponseBody response = new SendService().sendEnhancedMessage(sendEnhancedRequestBody);
-            System.out.println(response);
+            //System.out.println(response);
         } catch (IOException e) {
             e.printStackTrace();
         }

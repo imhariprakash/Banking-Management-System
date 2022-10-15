@@ -15,12 +15,14 @@ import java.io.IOException;
 
 public class SendEmailOTP extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //System.out.println("SendEmailOTP from controller");
         try{
             JsonObject jsonObject = JsonParser.parseReader(request.getReader()).getAsJsonObject();
             String email = jsonObject.get("email").getAsString();
             if(EmailValidation.isValidEmail(email)) {
                 int otp = OTPGenerator.generate();
                 EmailOTP.sendEmail(email, otp);
+                //System.out.println("OTP sent to " + email + " is " + otp + " from controller");
                 response.setStatus(200);
                 response.setContentType("application/json");
                 response.getWriter().write("{\"message\": Successfully sent otp to the mail.\"}");
