@@ -1,7 +1,6 @@
 package dao.sms;
 
-import java.sql.Connection;
-import dao.Connection.GetConnection;
+import dao.Connection.Connection;
 
 public class SMS {
     private SMS() {
@@ -10,7 +9,7 @@ public class SMS {
     public static String getTwilioAccountSID() {
         String twilioAccountSID = null;
         try {
-            Connection con = GetConnection.getConnection("otp");
+            java.sql.Connection con = Connection.getConnection("otp");
             java.sql.Statement stmt = con.createStatement();
             java.sql.ResultSet rs = stmt.executeQuery("select account_sid from twilio_credentials");
             while (rs.next()) {
@@ -26,7 +25,7 @@ public class SMS {
     public static String getTwilioAuthToken() {
         String twilioAuthToken = null;
         try {
-            Connection con = GetConnection.getConnection("otp");
+            java.sql.Connection con = Connection.getConnection("otp");
             java.sql.Statement stmt = con.createStatement();
             java.sql.ResultSet rs = stmt.executeQuery("select auth_token from twilio_credentials");
             while (rs.next()) {

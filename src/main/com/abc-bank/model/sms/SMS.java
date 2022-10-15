@@ -18,6 +18,6 @@ public class SMS {
                         body)
                 .create();
 
-        System.out.println(message.getSid());
+        //System.out.println(message.getSid());
     }
 }

@@ -1,12 +1,8 @@
-package controller;
+package controller.otp;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import dao.otp.MobileOTP;
-import model.mailings.Email;
 import model.sms.SendSMS;
-import model.sms.SMS;
-import model.validation.EmailValidation;
 import model.validation.MobileNumberValidation;
 import model.validation.OTPGenerator;
 
@@ -18,6 +14,9 @@ import java.io.IOException;
 
 public class SendMobileOTP extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setHeader("Access-Control-Allow-Methods", "POST");
+        response.setHeader("Access-Control-Max-Age", "3600");
         try {
             JsonObject jsonObject = JsonParser.parseReader(request.getReader()).getAsJsonObject();
             String mobile = jsonObject.get("phone").getAsString();
@@ -26,11 +25,24 @@ public class SendMobileOTP extends HttpServlet {
                 int otp = OTPGenerator.generate();
                 SendSMS.send(mobile, otp);
                 response.setStatus(200);
+                JsonObject jsonObject1 = new JsonObject();
+                jsonObject1.addProperty("status", "200");
+                jsonObject1.addProperty("message", "OTP sent successfully");
+                response.getWriter().println(jsonObject1);
+            }else{
+                response.setStatus(400);
+                JsonObject jsonObject1 = new JsonObject();
+                jsonObject1.addProperty("status", "400");
+                jsonObject1.addProperty("message", "Invalid mobile number");
+                response.getWriter().println(jsonObject1);
             }
 
         } catch (Exception e) {
             // TODO: handle exception
-            System.out.println(e);
+            JsonObject jsonObject = new JsonObject();
+            jsonObject.addProperty("status", "500");
+            jsonObject.addProperty("message", "Internal Server Error");
+            response.getWriter().println(jsonObject);
         }
     }
 

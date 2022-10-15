@@ -1,4 +1,4 @@
-package controller;
+package controller.otp;
 
 import model.validation.EmailValidation;
 import model.validation.OTPGenerator;
@@ -30,14 +30,27 @@ public class SendEmailOTP extends HttpServlet {
                 //System.out.println("OTP sent to " + email + " is " + otp + " from controller");
                 response.setStatus(200);
                 response.setContentType("application/json");
-                response.getWriter().write("{\"message\": Successfully sent otp to the mail.\"}");
+                JsonObject json = new JsonObject();
+                json.addProperty("status", "200");
+                json.addProperty("message", "Successfully sent OTP to " + email);
+                response.getWriter().print(json);
+            }else{
+                response.setStatus(400);
+                response.setContentType("application/json");
+                JsonObject json = new JsonObject();
+                json.addProperty("status", "400");
+                json.addProperty("message", "Invalid email");
+                response.getWriter().print(json);
             }
 
         }catch(Exception e){
             // TODO: handle exception
             response.setStatus(400);
+            JsonObject jsonObject = new JsonObject();
+            jsonObject.addProperty("status", "500");
+            jsonObject.addProperty("message", "Internal Server Error");
             response.setContentType("application/json");
-            response.getWriter().write("{\"message\": \"Invalid email.\"}");
+            response.getWriter().println(jsonObject);
         }
     }
 }

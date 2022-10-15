@@ -1,7 +1,7 @@
 package dao.Connection;
 
-public class GetConnection {
-    private GetConnection() {
+public class Connection {
+    private Connection() {
     } // Prevents instantiation
 
     public static java.sql.Connection getConnection(String database) {

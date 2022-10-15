@@ -1,21 +1,19 @@
 
-g
-7src/main/com/abc-bank/dao/Connection/GetConnection.java,c/6/c687a12dbe029af6f1deaa5ad0fcdd823c44a990
 Z
 *src/main/com/abc-bank/dao/email/Email.java,3/8/3876f1678074a6d891d4114c0e031f941aea66e4
 e
 5src/main/com/abc-bank/dao/login/LoginCredentials.java,7/4/74c69706ed1148c8a48c8cceac4c3fbb5b7d8320
-[
-+src/main/com/abc-bank/dao/otp/EmailOTP.java,d/c/dc76c82533f98d93c064fbe32cbd2409e49833ee
-\
-,src/main/com/abc-bank/dao/otp/MobileOTP.java,3/1/31837e8c8c343394ad6acde96b1bafd361823d8a
 V
 &src/main/com/abc-bank/dao/sms/SMS.java,4/1/410466421448e512e0bf8045a0884349d2ee25d3
 e
 5src/main/com/abc-bank/model/authentication/Login.java,a/3/a32a1e686280649ffb0b959243efe9d8b866d2bf
-\
-,src/main/com/abc-bank/model/sms/SendSMS.java,4/d/4de0ebbeec7f62b6c2528b2be3032c329af081ff
-X
-(src/main/com/abc-bank/model/sms/SMS.java,9/a/9a2af38734a82be3372da2e37df7ee7e611bb19b
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+i
+9src/main/com/abc-bank/controller/otp/VerifyMobileOTP.java,1/7/1711487640d9b7b715b956d05c6971971ba49da9
+h
+8src/main/com/abc-bank/controller/otp/VerifyEmailOTP.java,1/b/1b3471e5514291d2b91e459660e3e6719d35f76d
+f
+6src/main/com/abc-bank/controller/otp/SendEmailOTP.java,e/a/ea61b2455360b3f5a1e1ffc2e061a64aed9231c1
+O
+src/main/webapp/WEB-INF/web.xml,2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392

@@ -25,7 +25,7 @@
 	
 	<servlet>
 		<servlet-name>"email otp"</servlet-name>
-		<servlet-class>controller.SendEmailOTP</servlet-class>
+		<servlet-class>controller.otp.SendEmailOTP</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>"email otp"</servlet-name>
@@ -34,16 +34,34 @@
 	
 	<servlet>
 		<servlet-name>"mobile otp"</servlet-name>
-		<servlet-class>controller.SendMobileOTP</servlet-class>
+		<servlet-class>controller.otp.SendMobileOTP</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>"mobile otp"</servlet-name>
 		<url-pattern>/otp-mobile</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>verify-email-otp</servlet-name>
+		<servlet-class>controller.otp.VerifyEmailOTP</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>verify-email-otp</servlet-name>
+		<url-pattern>/verify-mobile-otp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>verify-mobile-otp</servlet-name>
+		<servlet-class>controller.otp.VerifyMobileOTP</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>verify-mobile-otp</servlet-name>
+		<url-pattern>/verify-email-otp</url-pattern>
+	</servlet-mapping>
+	
 	<filter>
 		<filter-name>CorsFilter</filter-name>
-		<filter-class>controller.CORSFilter</filter-class>
+		<filter-class>controller.cors_filter.CORSFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>CorsFilter</filter-name>

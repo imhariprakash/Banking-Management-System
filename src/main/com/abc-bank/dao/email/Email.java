@@ -1,8 +1,6 @@
 package dao.email;
 
-import dao.Connection.GetConnection;
-
-import java.sql.Connection;
+import dao.Connection.Connection;
 
 public class Email {
     private Email() {
@@ -11,7 +9,7 @@ public class Email {
     public static String getEmail() {
         String email = null;
         try {
-            Connection con = GetConnection.getConnection("otp");
+            java.sql.Connection con = Connection.getConnection("otp");
             String query = "select email from mail_credentials";
             java.sql.PreparedStatement ps = con.prepareStatement(query);
             java.sql.ResultSet rs = ps.executeQuery();
@@ -27,7 +25,7 @@ public class Email {
     public static String getPassword() {
         String password = null;
         try {
-            Connection con = GetConnection.getConnection("otp");
+            java.sql.Connection con = Connection.getConnection("otp");
             String query = "select password from mail_credentials";
             java.sql.PreparedStatement ps = con.prepareStatement(query);
             java.sql.ResultSet rs = ps.executeQuery();
