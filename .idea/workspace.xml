@@ -5,27 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c145098-27fe-440d-a762-75e4d2c7ba1e" name="Changes" comment="initial setup">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/register/create_account.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/1711487640d9b7b715b956d05c6971971ba49da9" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1b3471e5514291d2b91e459660e3e6719d35f76d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/reset_password/reset.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/3876f1678074a6d891d4114c0e031f941aea66e4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/410466421448e512e0bf8045a0884349d2ee25d3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/4/74c69706ed1148c8a48c8cceac4c3fbb5b7d8320" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a32a1e686280649ffb0b959243efe9d8b866d2bf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4de0ebbeec7f62b6c2528b2be3032c329af081ff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/4/64b913048b0991b0b5844ff5821209d4db5f87f3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9edf5fbdfc72f750ef8bbdbf67bd342e7a09f1b2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b11e0a723ccfa2528e0e1bc8299e076f981953bd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/c/bce6cb8b89361b69d5603c34eb912c1e4e7151cf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dc76c82533f98d93c064fbe32cbd2409e49833ee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/f/df6d595410af6f584ea282170511dcea65592864" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/5/e5a3aa440d0599cb02d250a8b2f7b10d0130f88b" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/ea61b2455360b3f5a1e1ffc2e061a64aed9231c1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/model/mailings/Email.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/mailings/Email.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/Register/create_account.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,9 +107,9 @@
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
       <option name="tomcatInfo">
         <TomcatInfo>
-          <option name="name" value="Apache Tomcat/9.0.65" />
-          <option name="path" value="/opt/apache-tomcat-9.0.65" />
-          <option name="version" value="9.0.65.0" />
+          <option name="name" value="Apache Tomcat/10.0.23" />
+          <option name="path" value="/opt/tomcat" />
+          <option name="version" value="10.0.23.0" />
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />

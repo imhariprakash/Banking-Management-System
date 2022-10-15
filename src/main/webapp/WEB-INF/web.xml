@@ -3,9 +3,6 @@
 		"http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-	<display-name>ABC Bank</display-name>
-	<description>ABC Bank</description>
-	
 	<servlet>
 		<servlet-name>login</servlet-name>
 		<jsp-file>/view/login_pages/netbanking_login.jsp</jsp-file>
