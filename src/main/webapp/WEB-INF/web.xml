@@ -40,4 +40,26 @@
 		<servlet-name>"mobile otp"</servlet-name>
 		<url-pattern>/otp-mobile</url-pattern>
 	</servlet-mapping>
+	
+	<filter>
+		<filter-name>CorsFilter</filter-name>
+		<filter-class>controller.CORSFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CorsFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>CorsFilter1</filter-name>
+		<filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+		<init-param>
+			<param-name>cors.allowed.origins</param-name>
+			<param-value>*</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CorsFilter1</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 </web-app>

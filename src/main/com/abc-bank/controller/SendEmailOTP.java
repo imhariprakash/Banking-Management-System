@@ -16,6 +16,11 @@ import java.io.IOException;
 public class SendEmailOTP extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //System.out.println("SendEmailOTP from controller");
+
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setHeader("Access-Control-Allow-Methods", "POST");
+        response.setHeader("Access-Control-Max-Age", "3600");
+
         try{
             JsonObject jsonObject = JsonParser.parseReader(request.getReader()).getAsJsonObject();
             String email = jsonObject.get("email").getAsString();

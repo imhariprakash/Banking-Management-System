@@ -19,5 +19,3 @@ X
 (src/main/com/abc-bank/model/sms/SMS.java,9/a/9a2af38734a82be3372da2e37df7ee7e611bb19b
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
-O
-src/main/webapp/WEB-INF/web.xml,2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392
