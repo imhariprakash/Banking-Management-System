@@ -3,6 +3,9 @@
 		"http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
+	<display-name>ABC BANK</display-name>
+	<description>ABC BANK</description>
+	
 	<servlet>
 		<servlet-name>login</servlet-name>
 		<jsp-file>/view/login_pages/netbanking_login.jsp</jsp-file>
@@ -23,7 +26,7 @@
 	
 	<servlet>
 		<servlet-name>account-create</servlet-name>
-		<jsp-file>/view/register/create_account.jsp</jsp-file>
+		<jsp-file>/view/register/register.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>account-create</servlet-name>
@@ -31,17 +34,8 @@
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>account-create-success</servlet-name>
-		<jsp-file>/view/register/account_create_success.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>account-create-success</servlet-name>
-		<url-pattern>/account-create-success</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
 		<servlet-name>password_reset</servlet-name>
-		<jsp-file>/view/reset_password</jsp-file>
+		<jsp-file>/view/reset_password/reset_password.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>password_reset</servlet-name>
