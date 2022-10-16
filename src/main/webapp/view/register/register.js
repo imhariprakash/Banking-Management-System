@@ -29,8 +29,6 @@ var email_verify = false;
 
 
 function submit_form(){
-
-    submit(); // for testing purpose - removing verification and captcha out of the equation
     
     if(!check()){  // verify captcha
         generate();
@@ -120,6 +118,7 @@ function empty(){
     var pincode = document.getElementById("pincode").value.trim();
     var dob = document.getElementById("dob").value.trim();
     var notes = document.getElementById("notes").value.trim();
+
     if(name == "" || f_name == "" || email == "" || phone == "" || aadhar == "" || pan == "" || address == "" || pincode == "" || dob == "" || notes == ""){
         alert("Please fill all the fields!");
         return true;
@@ -142,6 +141,8 @@ function submit(){
         dob: document.getElementById("dob").value.trim().replace("/", "-"),
         notes: document.getElementById("notes").value.trim()
     };
+
+    console.log(data);
 
     let response = sendOTPRequest(url, data);
     response.then(function(response){
