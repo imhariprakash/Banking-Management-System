@@ -29,6 +29,8 @@ var email_verify = false;
 
 
 function submit_form(){
+
+    submit(); // for testing purpose - removing verification and captcha out of the equation
     
     if(!check()){  // verify captcha
         generate();
