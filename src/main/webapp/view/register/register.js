@@ -24,6 +24,9 @@
 
 // submit verification - validate fields and captcha 
 
+var mobile_verify = false;
+var email_verify = false;
+
 
 function submit_form(){
     
@@ -234,6 +237,10 @@ function validate_email(elementId)
         //setTimeout(alert("Email cannot be empty!"),2000);
         return false;
     }
+    if(email_verify == false){
+        alert("Please verify your email!");
+        return false;
+    }
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
     {
         return (true);
@@ -246,6 +253,10 @@ function validate_phone(elementId){
     var phone = document.getElementById(elementId).value.trim();
     if(phone == ""){
         //setTimeout(alert("Phone cannot be empty!"),2000);
+        return false;
+    }
+    if(mobile_verify == false){
+        alert("Please verify your mobile number!");
         return false;
     }
     if (/^\d{10}$/.test(phone))
@@ -432,6 +443,7 @@ function verify_email_otp(){
             alert("Email verified");
             document.getElementById("email_otp").disabled = true;
             document.getElementById("email").disabled = true;
+            email_verify = true;
         }
         else{
             alert("wrong OTP - generate again!");
@@ -459,6 +471,7 @@ function verify_mobile_otp(){
             alert("Mobile verified");
             document.getElementById("phone").disabled = true;
             document.getElementById("phone_otp").disabled = true;
+            mobile_verify = true;
         }
         else{
             alert("Wrong OTP - generate again!");
