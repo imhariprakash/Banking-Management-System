@@ -55,7 +55,19 @@ function submit_form(){
         return;
     }
 
+    if(email_verify == false){
+        alert("Please verify your email");
+        generate();
+        return;
+    }
+
     if(!validate_phone("phone")){
+        generate();
+        return;
+    }
+
+    if(mobile_verify == false){
+        alert("Please verify your mobile number");
         generate();
         return;
     }
@@ -232,13 +244,10 @@ function validate_name(elementId){
 
 function validate_email(elementId) 
 {
+    return true;
     var email = document.getElementById(elementId).value.trim();
     if(email == ""){
         //setTimeout(alert("Email cannot be empty!"),2000);
-        return false;
-    }
-    if(email_verify == false){
-        alert("Please verify your email!");
         return false;
     }
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
@@ -253,10 +262,6 @@ function validate_phone(elementId){
     var phone = document.getElementById(elementId).value.trim();
     if(phone == ""){
         //setTimeout(alert("Phone cannot be empty!"),2000);
-        return false;
-    }
-    if(mobile_verify == false){
-        alert("Please verify your mobile number!");
         return false;
     }
     if (/^\d{10}$/.test(phone))
