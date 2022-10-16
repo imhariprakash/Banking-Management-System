@@ -25,7 +25,14 @@ public class SendEmailOTP extends HttpServlet {
             JsonObject jsonObject = JsonParser.parseReader(request.getReader()).getAsJsonObject();
             String email = jsonObject.get("email").getAsString();
             if(EmailValidation.isValidEmail(email)) {
-                int otp = OTPGenerator.generate();
+                int otp;
+                while(true){
+                    otp = OTPGenerator.generate();
+                    if(otp > 99999 && otp < 1000000){
+                        break;
+                    }
+                }
+
                 EmailOTP.sendEmail(email, otp);
                 //System.out.println("OTP sent to " + email + " is " + otp + " from controller");
                 response.setStatus(200);

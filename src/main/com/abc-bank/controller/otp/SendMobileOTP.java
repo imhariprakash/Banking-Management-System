@@ -22,7 +22,13 @@ public class SendMobileOTP extends HttpServlet {
             String mobile = jsonObject.get("phone").getAsString();
             System.out.println(mobile);
             if (MobileNumberValidation.isValidMobileNumber(mobile)) {
-                int otp = OTPGenerator.generate();
+                int otp;
+                while(true){
+                    otp = OTPGenerator.generate();
+                    if(otp > 99999 && otp < 1000000){
+                        break;
+                    }
+                }
                 SendSMS.send(mobile, otp);
                 response.setStatus(200);
                 JsonObject jsonObject1 = new JsonObject();

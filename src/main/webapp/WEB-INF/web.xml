@@ -46,15 +46,6 @@
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>account-create-success</servlet-name>
-		<servlet-class>controller.register.Fonts</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>account-create-success</servlet-name>
-		<url-pattern>/fonts/*</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
 		<servlet-name>password_reset</servlet-name>
 		<jsp-file>/view/reset_password/reset_password.jsp</jsp-file>
 	</servlet>

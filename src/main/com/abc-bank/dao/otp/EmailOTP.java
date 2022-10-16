@@ -7,6 +7,8 @@ public class EmailOTP {
     } // Prevents instantiation
 
     public static void updateDB(String email, int otp) {
+        deleteOTP();
+        deleteOTP(email);
         java.sql.Connection con = Connection.getConnection("otp");
         String query = "INSERT INTO email_otp (email, otp) VALUES (?, ?)";
         try {
@@ -69,6 +71,18 @@ public class EmailOTP {
             String query = "DELETE FROM email_otp WHERE email = ?";
             java.sql.PreparedStatement ps = con.prepareStatement(query);
             ps.setString(1, email);
+            ps.executeUpdate();
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }
+
+    public static void deleteOTP(){
+        try{
+            java.sql.Connection con = Connection.getConnection("otp");
+            String query = "DELETE FROM email_otp WHERE time_created < ?";
+            java.sql.PreparedStatement ps = con.prepareStatement(query);
+            ps.setTimestamp(1, new java.sql.Timestamp(new java.util.Date().getTime() - 1000 * 60 * 5));
             ps.executeUpdate();
         }catch(Exception e){
             System.out.println(e);

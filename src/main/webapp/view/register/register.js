@@ -26,7 +26,13 @@
 
 
 function submit_form(){
+    
     if(!check()){  // verify captcha
+        generate();
+        return;
+    }
+
+    if(empty()){
         generate();
         return;
     }
@@ -81,13 +87,31 @@ function submit_form(){
         return;
     }
 
-    submit_form();
+    submit();
     
     alert("Submitted!");               
 }
 
+function empty(){
+    var name = document.getElementById("name").value.trim();
+    var f_name = document.getElementById("f_name").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var phone = document.getElementById("phone").value.trim();
+    var aadhar = document.getElementById("aadhar").value.trim();
+    var pan = document.getElementById("pan").value.trim();
+    var address = document.getElementById("address").value.trim();
+    var pincode = document.getElementById("pincode").value.trim();
+    var dob = document.getElementById("dob").value.trim();
+    var notes = document.getElementById("notes").value.trim();
+    if(name == "" || f_name == "" || email == "" || phone == "" || aadhar == "" || pan == "" || address == "" || pincode == "" || dob == "" || notes == ""){
+        alert("Please fill all the fields!");
+        return true;
+    }
+    return false;
+}
 
-function submit_form(){
+
+function submit(){
     let url = "http://localhost:8080/abc-bank/create/account";
     let data = {
         name: document.getElementById("name").value.trim(),
@@ -98,7 +122,7 @@ function submit_form(){
         pan: document.getElementById("pan").value.trim(),
         address: document.getElementById("address").value.trim(),
         pincode: document.getElementById("pincode").value.trim(),
-        dob: document.getElementById("dob").value.trim(),
+        dob: document.getElementById("dob").value.trim().replace("/", "-"),
         notes: document.getElementById("notes").value.trim()
     };
 
@@ -341,6 +365,7 @@ async function sendOTPRequest(url, data){
 
    return fetch(url, requestOptions)
   .then(response => {return response.text()})
+  .catch(error => console.log('error', error));
     
 
 }

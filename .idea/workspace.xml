@@ -5,22 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9353c209-e9eb-410c-812c-b0f7daa9024e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/register/Fonts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/register/AlreadyRegistered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6eac18f69557d93b1a5348afde0d41fd0d05c01d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/844e942fde21116566debb70dec409249b6a4326" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dc76c82533f98d93c064fbe32cbd2409e49833ee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/ea61b2455360b3f5a1e1ffc2e061a64aed9231c1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/controller/otp/SendEmailOTP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/otp/SendEmailOTP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/controller/otp/SendMobileOTP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/otp/SendMobileOTP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/controller/register/Fonts.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/controller/register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/register/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/dao/otp/EmailOTP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/otp/EmailOTP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/dao/register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/register/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/model/register/AlreadyRegistered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/register/AlreadyRegistered.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/model/register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/register/Register.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/register/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/register/register.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/register/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/register/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/register/register.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

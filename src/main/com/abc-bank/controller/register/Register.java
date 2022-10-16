@@ -9,9 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class Register extends HttpServlet {
-    private Register() {
-    } // Prevents instantiation
-
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
 
         response.setHeader("Access-Control-Allow-Origin", "*");

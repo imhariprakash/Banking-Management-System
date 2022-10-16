@@ -1,15 +1,0 @@
-
-g
-java:S1192 "QDefine a constant instead of duplicating this literal "application/json" 3 times.(ªŞÃı
-c
-java:S1192#"HDefine a constant instead of duplicating this literal "message" 3 times.(Àè¼Ñüÿÿÿÿ
-\
-java:S1192""GDefine a constant instead of duplicating this literal "status" 3 times.(’P
-P
-java:S1161":Add the "@Override" annotation above this method signature(§œ×ä
-V	java:S125"<This block of commented-out lines of code should be removed.(æ­’§ıÿÿÿÿ
-Q	java:S125"<This block of commented-out lines of code should be removed.(ï•ìĞ
-H
-java:S1135/"2Complete the task associated to this TODO comment.(‡ñÅ¼
-k
-java:S19895"PHandle the following exception that could be thrown by "getWriter": IOException.(”äèşøÿÿÿÿ
