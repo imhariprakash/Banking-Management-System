@@ -41,11 +41,12 @@ public class VerifyEmailOTP extends HttpServlet {
                 response.getWriter().println(json);
             }
         } catch (Exception e) {
+            System.out.println(e);
             response.setStatus(500);
             response.setContentType("application/json");
             JsonObject json = new JsonObject();
             json.addProperty("status", "500");
-            json.addProperty("message", "Internal Server Error");
+            json.addProperty("message", "Internals Server Error");
             response.getWriter().println(json);
         }
     }

@@ -15,7 +15,7 @@ public class EmailOTP {
             ps.setInt(2, otp);
             ps.executeUpdate();
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println(e);
         }
 
         query = "INSERT INTO email_otp_log (email, otp, time_created) VALUES (?, ?, ?)";
@@ -26,7 +26,7 @@ public class EmailOTP {
             ps.setTimestamp(3, new java.sql.Timestamp(new java.util.Date().getTime()));
             ps.executeUpdate();
         } catch (Exception e) {
-            // TODO: handle exception
+            System.out.println(e);
         }
     }
 
@@ -44,7 +44,7 @@ public class EmailOTP {
                 }
             }
         }catch(Exception e){
-            // TODO : handle exception
+            System.out.println(e);
         }
         return false;
     }
@@ -59,7 +59,7 @@ public class EmailOTP {
             ps.setTimestamp(3, time_verified);
             ps.executeUpdate();
         }catch(Exception e){
-            // TODO : handle exception
+            System.out.println(e);
         }
     }
 
@@ -71,7 +71,7 @@ public class EmailOTP {
             ps.setString(1, email);
             ps.executeUpdate();
         }catch(Exception e){
-            // TODO : handle exception
+            System.out.println(e);
         }
     }
 }

@@ -37,6 +37,15 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>account-create-submit</servlet-name>
+		<servlet-class>controller.register.Register</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>account-create-submit</servlet-name>
+		<url-pattern>/create/new-account</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>password_reset</servlet-name>
 		<jsp-file>/view/reset_password/reset_password.jsp</jsp-file>
 	</servlet>
@@ -69,7 +78,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>verify-email-otp</servlet-name>
-		<url-pattern>/verify-mobile-otp</url-pattern>
+		<url-pattern>/verify-email-otp</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
@@ -78,28 +87,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>verify-mobile-otp</servlet-name>
-		<url-pattern>/verify-email-otp</url-pattern>
+		<url-pattern>/verify-mobile-otp</url-pattern>
 	</servlet-mapping>
 	
-	<filter>
-		<filter-name>CorsFilter</filter-name>
-		<filter-class>controller.cors_filter.CORSFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>CorsFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
-	
-	<filter>
-		<filter-name>CorsFilter1</filter-name>
-		<filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
-		<init-param>
-			<param-name>cors.allowed.origins</param-name>
-			<param-value>*</param-value>
-		</init-param>
-	</filter>
-	<filter-mapping>
-		<filter-name>CorsFilter1</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
 </web-app>

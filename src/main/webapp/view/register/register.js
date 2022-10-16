@@ -80,9 +80,39 @@ function submit_form(){
         generate();
         return;
     }
+
+    submit_form();
     
-    alert("Submitted!");
-    document.getElementById("register").submit();                
+    alert("Submitted!");               
+}
+
+
+function submit_form(){
+    let url = "http://localhost:8080/abc-bank/create/new-account";
+    let data = {
+        name: $("#name").val(),
+        f_name: $("#f_name").val(),
+        email: $("#email").val(),
+        phone: $("#phone").val(),
+        aadhar: $("#aadhar").val(),
+        pan: $("#pan").val(),
+        address: $("#address").val(),
+        pincode: $("#pincode").val(),
+        dob: $("#dob").val(),
+        notes: $("#notes").val(),
+        file: $("#pdf").files[0],
+    };
+    $.ajax({
+        url: url,
+        type: "POST",
+        data: data,
+        success: function (data) {
+            window.location.replace = "http://localhost:8080/abc-bank/status/new-account";
+        },
+        error: function (data) {
+            alert("Error");
+        }
+    });
 }
 
 // disable submit by pressing enter key
@@ -383,7 +413,7 @@ function verify_email_otp(){
 }
 
 function verify_mobile_otp(){
-    if(document.getElementById("mobile_otp").disabled == true){
+    if(document.getElementById("phone_otp").disabled == true){
         return;
     }
     var mobile_otp = document.getElementById("phone_otp").value.trim();
