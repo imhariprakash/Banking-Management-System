@@ -2,6 +2,7 @@ package model.register;
 
 import com.google.gson.JsonObject;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -20,7 +21,7 @@ public class Register {
             String pan = json.get("pan").getAsString().trim().replace("\\s", "").toUpperCase();
             String address = json.get("address").getAsString().trim();
             int pincode = json.get("pincode").getAsInt();
-            Timestamp timestamp = getTimestamp(json.get("dob").getAsString());
+            Date dob = getDate(json.get("dob").getAsString());
             String notes = json.get("notes").getAsString().trim();
             System.out.println(name);
             System.out.println(f_name);
@@ -30,7 +31,7 @@ public class Register {
             System.out.println(pan);
             System.out.println(address);
             System.out.println(pincode);
-            System.out.println(timestamp);
+            System.out.println(dob);
             System.out.println(notes);
         } catch (Exception e) {
             e.printStackTrace();
@@ -47,13 +48,13 @@ public class Register {
         return String.join(" ", words);
     }
 
-    public static Timestamp getTimestamp(String date){
-        DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    public static Date getDate(String date){
         try {
-            return new Timestamp(formatter.parse(date).getTime());
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            return new Date(dateFormat.parse(date).getTime());
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
-        return null;
     }
 }
