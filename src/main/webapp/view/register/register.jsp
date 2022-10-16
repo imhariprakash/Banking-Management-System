@@ -193,7 +193,7 @@
         </div>
 
         <button class="btn btn-primary btn-block col-lg-2 ml-450"
-            onclick="submit()">Submit
+            onclick="submit_form()">Submit
         </button>
     </div>
 

@@ -5,29 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9353c209-e9eb-410c-812c-b0f7daa9024e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/AadharValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/AddressValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/AgeValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/NameValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/NotesValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/PanValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/PincodeValidation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/ValidateApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/30c72caf1c5a65af37478e4c041ac52b6a0154c5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/763cc74f4247e4b6f2cbf2f2922c505ca0bfb9c5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/controller/register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/register/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/dao/register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/register/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/model/register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/register/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/EmailValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/EmailValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/MobileNumberValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/MobileNumberValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/OTPGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/OTPGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

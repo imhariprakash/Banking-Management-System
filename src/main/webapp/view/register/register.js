@@ -247,7 +247,6 @@ function validate_name(elementId){
 
 function validate_email(elementId) 
 {
-    return true;
     var email = document.getElementById(elementId).value.trim();
     if(email == ""){
         //setTimeout(alert("Email cannot be empty!"),2000);
