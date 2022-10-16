@@ -1,25 +1,25 @@
 // functions to check file size and format - pdf less than 2mb
 
-var myFile="";
+// var myFile="";
 
-$('#file').on('change',function(){
+// $('#file').on('change',function(){
 
-    myFile = $("#file").val();
-    var upload = myFile.split('.').pop();
-    if(upload=='pdf'){
-        if(document.getElementById("file").files[0].size > 2097152){
-            alert("File is too big!");
-            $("#file").val('');
-        }
-        else{
-            alert("File uploaded successfully");
-        }
-    }else{
-        document.getElementById("file").value = null;
-        alert("Only PDF files are allowed")
-    }
+//     myFile = $("#file").val();
+//     var upload = myFile.split('.').pop();
+//     if(upload=='pdf'){
+//         if(document.getElementById("file").files[0].size > 2097152){
+//             alert("File is too big!");
+//             $("#file").val('');
+//         }
+//         else{
+//             alert("File uploaded successfully");
+//         }
+//     }else{
+//         document.getElementById("file").value = null;
+//         alert("Only PDF files are allowed")
+//     }
 
-});
+// });
 
 
 // submit verification - validate fields and captcha 
@@ -88,31 +88,34 @@ function submit_form(){
 
 
 function submit_form(){
-    let url = "http://localhost:8080/abc-bank/create/new-account";
+    let url = "http://localhost:8080/abc-bank/create/account";
     let data = {
-        name: $("#name").val(),
-        f_name: $("#f_name").val(),
-        email: $("#email").val(),
-        phone: $("#phone").val(),
-        aadhar: $("#aadhar").val(),
-        pan: $("#pan").val(),
-        address: $("#address").val(),
-        pincode: $("#pincode").val(),
-        dob: $("#dob").val(),
-        notes: $("#notes").val(),
-        file: $("#pdf").files[0],
+        name: document.getElementById("name").value.trim(),
+        f_name: document.getElementById("f_name").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        aadhar: document.getElementById("aadhar").value.trim(),
+        pan: document.getElementById("pan").value.trim(),
+        address: document.getElementById("address").value.trim(),
+        pincode: document.getElementById("pincode").value.trim(),
+        dob: document.getElementById("dob").value.trim(),
+        notes: document.getElementById("notes").value.trim()
     };
-    $.ajax({
-        url: url,
-        type: "POST",
-        data: data,
-        success: function (data) {
-            window.location.replace = "http://localhost:8080/abc-bank/status/new-account";
-        },
-        error: function (data) {
-            alert("Error");
+
+    let response = sendOTPRequest(url, data);
+    response.then(function(response){
+        let result = JSON.parse(response);
+        console.log(result);
+        if(result.status == 200){
+            alert("Successfully registered! - Verification pending");
+            window.location.href = "http://localhost:8080/abc-bank/login";
+        }
+        else{
+            alert("error - check your mobile number");
         }
     });
+    
+    
 }
 
 // disable submit by pressing enter key

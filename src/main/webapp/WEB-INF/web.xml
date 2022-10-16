@@ -42,7 +42,16 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>account-create-submit</servlet-name>
-		<url-pattern>/create/new-account</url-pattern>
+		<url-pattern>/create/account</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>account-create-success</servlet-name>
+		<servlet-class>controller.register.Fonts</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>account-create-success</servlet-name>
+		<url-pattern>/fonts/*</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>

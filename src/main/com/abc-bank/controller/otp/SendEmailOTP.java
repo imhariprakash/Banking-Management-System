@@ -45,7 +45,7 @@ public class SendEmailOTP extends HttpServlet {
 
         }catch(Exception e){
             // TODO: handle exception
-            response.setStatus(400);
+            response.setStatus(500);
             JsonObject jsonObject = new JsonObject();
             jsonObject.addProperty("status", "500");
             jsonObject.addProperty("message", "Internal Server Error");

@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+
 <html>
 <head>
     <!-- Required meta tags -->
@@ -160,20 +161,17 @@
                             of birth.</small>
                     </div>
 
-                    <div class="mb-3">
+                    <%-- <div class="mb-3">
                         <label for="pdf" class="form-label">Upload pdf</label>
                         <input class="form-control" type="file" id="pdf"
                             name="pdf"
-                            accept="application/pdf" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="notes">Notes (optional)</label>
-                        <textarea class="form-control" name="notes"
-                            id="notes" rows="2"
-                            onfocusout="validate_notes('notes')">
-                        </textarea>
-                    </div>
+                            accept="application/pdf">
+                    </div> --%>
+                </div>
+                <div>
+                    <label for="notes">Notes<small>  (optional)</small></label>
+                    <textarea id="notes" class="form-control" name="notes"
+                        rows="3" placeholder="Share with us any other information"></textarea>
                 </div>
             </div>
         </form>

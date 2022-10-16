@@ -11,7 +11,7 @@ public class Register {
 
     public static void register(JsonObject json){
         try {
-
+            dao.register.Register.register(json);
         } catch (Exception e) {
             e.printStackTrace();
         }

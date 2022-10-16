@@ -5,24 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9353c209-e9eb-410c-812c-b0f7daa9024e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/register/Register.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/register/Register.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/register/AlreadyRegistered.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/register/Register.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/register/Fonts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/controller/cors_filter/CORSFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/controller/otp/VerifyEmailOTP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/otp/VerifyEmailOTP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/dao/otp/EmailOTP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/otp/EmailOTP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/model/authentication/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/authentication/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/controller/otp/SendEmailOTP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/otp/SendEmailOTP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/controller/register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/register/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/dao/register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/register/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/model/register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/register/Register.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/register/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/register/register.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/register/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/register/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/register/register.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,17 +66,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/local/ZOHOCORP/hari-pt5920/Desktop/abc-bank",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.5494253",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/local/ZOHOCORP/hari-pt5920/Desktop/abc-bank&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5494253&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="abc-bank" />
