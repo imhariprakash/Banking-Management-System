@@ -17,14 +17,20 @@ public class Register extends HttpServlet {
 
         try{
             JsonObject jsonRequest = JsonParser.parseString(request.getReader().readLine()).getAsJsonObject();
-            model.register.Register.register(jsonRequest);
-            response.setStatus(200);
-            response.setContentType("application/json");
             JsonObject jsonResponse = new JsonObject();
-            jsonResponse.addProperty("status", "200");
-            jsonResponse.addProperty("message", "Successfully registered");
+            model.register.Register.register(jsonRequest, jsonResponse);
+            if(jsonResponse.get("status").getAsString().equals("200")) {
+                response.setStatus(200);
+            }
+            else if(jsonResponse.get("status").getAsString().equals("500")){
+                response.setStatus(500);
+            }else{
+                response.setStatus(400);
+            }
+            response.setContentType("application/json");
             response.getWriter().print(jsonResponse);
-        }catch (Exception e){
+        }catch (Exception e){ // This is almost never reached because of the try-catch in the model
+            System.out.println("Error in Register.java from controller.register");
             System.out.println(e);
             response.setStatus(400);
             JsonObject jsonResponse = new JsonObject();

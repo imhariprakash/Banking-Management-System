@@ -5,21 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9353c209-e9eb-410c-812c-b0f7daa9024e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/30c72caf1c5a65af37478e4c041ac52b6a0154c5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/763cc74f4247e4b6f2cbf2f2922c505ca0bfb9c5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/AadharValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/AddressValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/AgeValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/NameValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/NotesValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/PanValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/PincodeValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/ValidateApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/1711487640d9b7b715b956d05c6971971ba49da9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1b3471e5514291d2b91e459660e3e6719d35f76d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/31837e8c8c343394ad6acde96b1bafd361823d8a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/410466421448e512e0bf8045a0884349d2ee25d3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4de0ebbeec7f62b6c2528b2be3032c329af081ff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/a/9a2af38734a82be3372da2e37df7ee7e611bb19b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a32a1e686280649ffb0b959243efe9d8b866d2bf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/2/b2e75221d13c619f6d3ac751ebc4d10d9b20ca6f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/30c72caf1c5a65af37478e4c041ac52b6a0154c5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/763cc74f4247e4b6f2cbf2f2922c505ca0bfb9c5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/register/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/register/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/register/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/controller/register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/register/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/dao/register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/register/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/model/register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/register/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/EmailValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/EmailValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/MobileNumberValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/MobileNumberValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/OTPGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/OTPGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +78,6 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/home/local/ZOHOCORP/hari-pt5920/Desktop/abc-bank",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",

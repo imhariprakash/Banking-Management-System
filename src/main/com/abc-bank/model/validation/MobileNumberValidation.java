@@ -1,6 +1,10 @@
 package model.validation;
 
 public class MobileNumberValidation {
+
+    /*
+    *   This class validates mobile numbers based on regex
+     */
     private MobileNumberValidation() {
     } // Prevents instantiation
 

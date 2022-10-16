@@ -1,6 +1,10 @@
 package model.validation;
 
 public class EmailValidation {
+    /*
+        * Email validation
+        * Verifies that the email is valid, based on regex
+     */
     private EmailValidation() {
     } // Prevents instantiation
 

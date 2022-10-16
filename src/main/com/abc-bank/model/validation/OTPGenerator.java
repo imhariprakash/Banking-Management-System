@@ -3,6 +3,10 @@ package model.validation;
 import java.util.Random;
 
 public class OTPGenerator {
+    /*
+    * This class generates a random 6 digit OTP
+    * Using Java Math.random() method - generates a random number between 0 and 9 (inclusive) - 6 times
+     */
     private OTPGenerator() {
     } // private constructor
 

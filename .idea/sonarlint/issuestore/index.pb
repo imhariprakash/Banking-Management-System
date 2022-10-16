@@ -1,7 +1,19 @@
 
-g
-7src/main/com/abc-bank/controller/register/Register.java,7/6/763cc74f4247e4b6f2cbf2f2922c505ca0bfb9c5
-O
-src/main/webapp/WEB-INF/web.xml,2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392
-`
-0src/main/com/abc-bank/dao/register/Register.java,3/0/30c72caf1c5a65af37478e4c041ac52b6a0154c5
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+i
+9src/main/com/abc-bank/model/validation/PanValidation.java,5/c/5ced15cf04c31b5fb802da615eb2bea75e40fe82
+l
+<src/main/com/abc-bank/model/validation/AadharValidation.java,1/8/18d92c6f63b8cb71b816ffaee105437b752d0743
+m
+=src/main/com/abc-bank/model/validation/AddressValidation.java,5/3/530c97f3895ed195af700536867e7129c3ebd72d
+m
+=src/main/com/abc-bank/model/validation/PincodeValidation.java,2/b/2bb0b8c60746d97f0a7c4233a2442cfd4c132ebc
+i
+9src/main/com/abc-bank/model/validation/AgeValidation.java,c/e/cef9db31bc2f41326585ed544f1a928209765077
+j
+:src/main/com/abc-bank/model/validation/NameValidation.java,d/e/dea630f0259eb95f7cb4862b5ecb4ddebcca0fd9
+k
+;src/main/com/abc-bank/model/validation/NotesValidation.java,f/6/f65b59c7f562cfe1355fb2a352f6849ed812f340
+_
+/src/main/com/abc-bank/model/mailings/Email.java,9/e/9edf5fbdfc72f750ef8bbdbf67bd342e7a09f1b2
