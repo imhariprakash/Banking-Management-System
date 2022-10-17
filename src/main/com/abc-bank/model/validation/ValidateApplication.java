@@ -199,6 +199,7 @@ public class ValidateApplication {
 
 
         dao.register.Register.register(json, response);
+        dao.register.Register.register_log(json, response);
         Mail.mail(email);
 
     }

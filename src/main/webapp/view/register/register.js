@@ -153,7 +153,7 @@ function submit(){
             window.location.href = "http://localhost:8080/abc-bank/login";
         }
         else{
-            alert("error - check your mobile number");
+            alert(result.message);
         }
     });
     

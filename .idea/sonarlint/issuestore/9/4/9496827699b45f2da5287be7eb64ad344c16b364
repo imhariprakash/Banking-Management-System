@@ -1,9 +1,0 @@
-
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ρχΊ
-]
-java:S2259΅"FA "NullPointerException" could be thrown; "getDate()" can return null.(ύ¬£έ
-h
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(…¶„
-Y
-java:S1659"CDeclare "f_name" and all following declarations on a separate line.(›ρχΊ
-R	java:S125ζ"<This block of commented-out lines of code should be removed.(κµ

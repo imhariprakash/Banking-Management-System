@@ -46,6 +46,15 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>application-rejected</servlet-name>
+		<servlet-class>controller.admin.RejectApplication</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>application-rejected</servlet-name>
+		<url-pattern>/admin/account/reject</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>review-application</servlet-name>
 		<jsp-file>/view/admin/review/account/review.jsp</jsp-file>
 	</servlet>
