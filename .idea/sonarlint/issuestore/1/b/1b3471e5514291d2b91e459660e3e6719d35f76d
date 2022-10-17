@@ -1,0 +1,23 @@
+
+g
+java:S1192)"QDefine a constant instead of duplicating this literal "application/json" 3 times.(ªŞÃı
+c
+java:S1192 "HDefine a constant instead of duplicating this literal "message" 4 times.(éÛÖ£şÿÿÿÿ
+]
+java:S1192"GDefine a constant instead of duplicating this literal "status" 4 times.(ÁÂƒ 
+P
+java:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+P
+java:S1161":Add the "@Override" annotation above this method signature(à»¢ü
+V	java:S125"<This block of commented-out lines of code should be removed.(’¿Ì¢ùÿÿÿÿ
+f
+java:S1989-"PHandle the following exception that could be thrown by "getWriter": IOException.(–ı…×
+f
+java:S19894"PHandle the following exception that could be thrown by "getWriter": IOException.(–ı…×
+S	java:S1067"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+f
+java:S1989="PHandle the following exception that could be thrown by "getWriter": IOException.(–ı…×
+_
+java:S1128"=Remove this unused import 'model.validation.EmailValidation'.(ªÁ×¶ÿÿÿÿÿ8Éôª¾0
+X
+java:S1128";Remove this unused import 'javax.servlet.ServletException'.(Š‰™Œ8Êôª¾0

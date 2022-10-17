@@ -119,7 +119,7 @@ function empty(){
     var dob = document.getElementById("dob").value.trim();
     var notes = document.getElementById("notes").value.trim();
 
-    if(name == "" || f_name == "" || email == "" || phone == "" || aadhar == "" || pan == "" || address == "" || pincode == "" || dob == "" || notes == ""){
+    if(name == "" || f_name == "" || email == "" || phone == "" || aadhar == "" || pan == "" || address == "" || pincode == "" || dob == ""){
         alert("Please fill all the fields!");
         return true;
     }

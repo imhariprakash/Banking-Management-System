@@ -37,6 +37,24 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>application-reviewed</servlet-name>
+		<servlet-class>controller.admin.CreateAccount</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>application-reviewed</servlet-name>
+		<url-pattern>/admin/account</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>review-application</servlet-name>
+		<jsp-file>/view/admin/review/account/review.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>review-application</servlet-name>
+		<url-pattern>/admin/review</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>account-create-submit</servlet-name>
 		<servlet-class>controller.register.Register</servlet-class>
 	</servlet>

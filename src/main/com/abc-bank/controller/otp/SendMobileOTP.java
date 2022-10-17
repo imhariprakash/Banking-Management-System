@@ -19,8 +19,24 @@ public class SendMobileOTP extends HttpServlet {
         response.setHeader("Access-Control-Max-Age", "3600");
         try {
             JsonObject jsonObject = JsonParser.parseReader(request.getReader()).getAsJsonObject();
-            String mobile = jsonObject.get("phone").getAsString();
-            System.out.println(mobile);
+            String mobile;
+            try {
+                mobile = jsonObject.get("phone").getAsString();
+            }catch (Exception e) {
+                JsonObject jsonObject1 = new JsonObject();
+                jsonObject1.addProperty("status", "400");
+                jsonObject1.addProperty("message", "Invalid mobile number");
+                response.setStatus(400);
+                response.getWriter().println(jsonObject1);
+                return;
+            }
+            if(!MobileNumberValidation.isValidMobileNumber(mobile)){
+                JsonObject responseJsonObject = new JsonObject();
+                responseJsonObject.addProperty("status", "400");
+                responseJsonObject.addProperty("message", "Invalid Mobile Number");
+                response.getWriter().write(responseJsonObject.toString());
+                return;
+            }
             if (MobileNumberValidation.isValidMobileNumber(mobile)) {
                 int otp;
                 while(true){
@@ -45,6 +61,7 @@ public class SendMobileOTP extends HttpServlet {
 
         } catch (Exception e) {
             // TODO: handle exception
+            System.out.println(e);
             JsonObject jsonObject = new JsonObject();
             jsonObject.addProperty("status", "500");
             jsonObject.addProperty("message", "Internal Server Error");

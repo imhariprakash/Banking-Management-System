@@ -1,0 +1,20 @@
+
+g
+java:S1192$"QDefine a constant instead of duplicating this literal "application/json" 3 times.(ªŞÃı
+c
+java:S1192"HDefine a constant instead of duplicating this literal "message" 4 times.(œÛêÖşÿÿÿÿ
+b
+java:S1192"GDefine a constant instead of duplicating this literal "status" 4 times.(¹¾Ÿûÿÿÿÿ
+P
+java:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+U
+java:S1161":Add the "@Override" annotation above this method signature(·Á„øÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(ä÷÷ğşÿÿÿÿ
+f
+java:S1989("PHandle the following exception that could be thrown by "getWriter": IOException.(–ı…×
+f
+java:S1989/"PHandle the following exception that could be thrown by "getWriter": IOException.(–ı…×
+H
+java:S11352"2Complete the task associated to this TODO comment.(‡ñÅ¼
+f
+java:S19898"PHandle the following exception that could be thrown by "getWriter": IOException.(–ı…×

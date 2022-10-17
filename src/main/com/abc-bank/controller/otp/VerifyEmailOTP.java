@@ -21,8 +21,19 @@ public class VerifyEmailOTP extends HttpServlet {
 
         try {
             JsonObject jsonObject = JsonParser.parseReader(request.getReader()).getAsJsonObject();
-            String email = jsonObject.get("email").getAsString();
-            int otp = jsonObject.get("otp").getAsInt();
+            String email = "";
+            int otp = 0;
+            try {
+                email = jsonObject.get("email").getAsString();
+                otp = jsonObject.get("otp").getAsInt();
+            } catch (Exception e) {
+                JsonObject responseJson = new JsonObject();
+                responseJson.addProperty("status", "400");
+                responseJson.addProperty("message", "OTP is not valid");
+                response.setStatus(400);
+                response.getWriter().println(responseJson);
+                return;
+            }
             if (dao.otp.EmailOTP.verifyOTP(email, otp)) {
                 dao.otp.EmailOTP.updateDB(email, otp, new Timestamp(new java.util.Date().getTime()));
                 dao.otp.EmailOTP.deleteOTP(email);

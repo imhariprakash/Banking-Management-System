@@ -188,10 +188,19 @@ public class ValidateApplication {
             return;
         }
 
+        if(dao.register.AlreadyRegistered.isAlreadyRegistered(email, phone, pan, aadhar, response)){
+            return; // already registered
+        }
+
+        // check if user already exists / user data is already present in database(aadhar, pan, phone, email)
+
 
         // ready to update database and send email
 
+
         dao.register.Register.register(json, response);
+        Mail.mail(email);
+
     }
 
     public static String capitalize(String str){

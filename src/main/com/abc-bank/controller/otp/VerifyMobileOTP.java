@@ -17,8 +17,18 @@ public class VerifyMobileOTP extends HttpServlet {
 
         try {
             JsonObject jsonObject = JsonParser.parseReader(request.getReader()).getAsJsonObject();
-            String mobile = jsonObject.get("mobile").getAsString();
-            int otp = jsonObject.get("otp").getAsInt();
+            String mobile = "";
+            int otp = 0;
+            try {
+                mobile = jsonObject.get("mobile").getAsString();
+                otp = jsonObject.get("otp").getAsInt();
+            } catch (Exception e) {
+                JsonObject jsonObject1 = new JsonObject();
+                jsonObject1.addProperty("status", "400");
+                jsonObject1.addProperty("message", "Check mobile and otp");
+                response.setStatus(400);
+                response.getWriter().println(jsonObject1);
+            }
             if (dao.otp.MobileOTP.verifyOTP(mobile, otp)) {
                 dao.otp.MobileOTP.updateDB(mobile, otp, new java.sql.Timestamp(new java.util.Date().getTime()));
                 dao.otp.MobileOTP.deleteOTP(mobile);

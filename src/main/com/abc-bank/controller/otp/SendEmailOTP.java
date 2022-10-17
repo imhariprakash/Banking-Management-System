@@ -23,7 +23,26 @@ public class SendEmailOTP extends HttpServlet {
 
         try{
             JsonObject jsonObject = JsonParser.parseReader(request.getReader()).getAsJsonObject();
-            String email = jsonObject.get("email").getAsString();
+            String email;
+            try {
+                email = jsonObject.get("email").getAsString();
+            }catch (Exception e){
+                response.setStatus(400);
+                response.setContentType("application/json");
+                JsonObject jsonObject1 = new JsonObject();
+                response.setStatus(400);
+                jsonObject1.addProperty("status", "400");
+                jsonObject1.addProperty("message", "Email is required");
+                response.getWriter().println(jsonObject1);
+                return;
+            }
+            if(!model.validation.EmailValidation.isValidEmail(email)){
+                JsonObject responseJsonObject = new JsonObject();
+                responseJsonObject.addProperty("status", "400");
+                responseJsonObject.addProperty("message", "Invalid Email");
+                response.getWriter().println(responseJsonObject);
+                return;
+            }
             if(EmailValidation.isValidEmail(email)) {
                 int otp;
                 while(true){
@@ -40,14 +59,14 @@ public class SendEmailOTP extends HttpServlet {
                 JsonObject json = new JsonObject();
                 json.addProperty("status", "200");
                 json.addProperty("message", "Successfully sent OTP to " + email);
-                response.getWriter().print(json);
+                response.getWriter().println(json);
             }else{
                 response.setStatus(400);
                 response.setContentType("application/json");
                 JsonObject json = new JsonObject();
                 json.addProperty("status", "400");
                 json.addProperty("message", "Invalid email");
-                response.getWriter().print(json);
+                response.getWriter().println(json);
             }
 
         }catch(Exception e){

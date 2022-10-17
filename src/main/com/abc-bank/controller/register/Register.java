@@ -18,7 +18,7 @@ public class Register extends HttpServlet {
         try{
             JsonObject jsonRequest = JsonParser.parseString(request.getReader().readLine()).getAsJsonObject();
             JsonObject jsonResponse = new JsonObject();
-            model.register.Register.register(jsonRequest, jsonResponse);
+            model.validation.ValidateApplication.validate(jsonRequest, jsonResponse);
             if(jsonResponse.get("status").getAsString().equals("200")) {
                 response.setStatus(200);
             }
