@@ -24,7 +24,6 @@ public class Applications {
     public static void deleteApplication(String email) {
         try{
             Connection connection = dao.Connection.Connection.getConnection("applications");
-            System.out.println("Deleting application for " + email);
             java.sql.PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM applications WHERE email = ?");
             preparedStatement.setString(1, email);
             preparedStatement.executeUpdate();
@@ -36,7 +35,7 @@ public class Applications {
     public static void updateApplication_log(String email, String applied_on, String status, String verified_by) {
         try{
             Connection connection = dao.Connection.Connection.getConnection("applications");
-            java.sql.PreparedStatement preparedStatement = connection.prepareStatement("UPDATE application_log SET status = ?, verified_by = ?, verified_on = ? WHERE email = ? AND applied_on = ?");
+            java.sql.PreparedStatement preparedStatement = connection.prepareStatement("UPDATE applications_log SET status = ?, verified_by = ?, verified_on = ? WHERE email = ? AND applied_on = ?");
             preparedStatement.setString(1, status);
             preparedStatement.setString(2, verified_by);
             preparedStatement.setString(3, java.time.LocalDate.now().toString());

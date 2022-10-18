@@ -30,7 +30,7 @@ public class Register {
 
         try{
             Connection connection = dao.Connection.Connection.getConnection("applications");
-            java.sql.PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO applications (cust_name, father_name, email, phone, aadhar, pan, address, notes, pincode, dob) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            java.sql.PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO applications (cust_name, father_name, email, phone, aadhar, pan, address, notes, pincode, dob, applied_on) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, f_name);
             preparedStatement.setString(3, email);
@@ -41,6 +41,7 @@ public class Register {
             preparedStatement.setString(8, notes);
             preparedStatement.setInt(9, pincode);
             preparedStatement.setDate(10, dob);
+            preparedStatement.setString(11, java.time.LocalDate.now().toString());
 
             preparedStatement.executeUpdate();
             response.addProperty("status", "200");

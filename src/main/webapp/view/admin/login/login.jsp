@@ -82,7 +82,7 @@
 
             <div>
                 <p class="center-text top-margin">Forgot <a
-                        href="forgot-password">Username / Password</a></p>
+                        href="admin/forgot-password">Username / Password</a></p>
             </div>
         </div>
     </body>

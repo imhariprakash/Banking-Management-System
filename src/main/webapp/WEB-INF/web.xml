@@ -91,6 +91,15 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>admin_login_forgot_password</servlet-name>
+		<servlet-class>controller.admin.</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin_login_forgot_password</servlet-name>
+		<url-pattern>/login/admin/forgot-password</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>adminLogin</servlet-name>
 		<servlet-class>controller.admin.Login</servlet-class>
 	</servlet>

@@ -20,7 +20,6 @@ public class CreateAccount extends HttpServlet {
         HttpSession session = request.getSession();
         String verified_by = (String) session.getAttribute("username");
 
-        System.out.println("Create Account Servlet");
 
         if(verified_by == null){
             response.setStatus(401);
@@ -32,7 +31,6 @@ public class CreateAccount extends HttpServlet {
 
         try{
             JsonObject jsonObject = JsonParser.parseReader(request.getReader()).getAsJsonObject();
-            System.out.println(verified_by);
             jsonObject.addProperty("verified_by", verified_by);
             model.accounts.CreateAccount.create(jsonObject, json);
             dao.applications.Applications.deleteApplication(jsonObject.get("email").getAsString());
