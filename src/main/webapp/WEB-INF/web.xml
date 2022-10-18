@@ -28,6 +28,24 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>application-status</servlet-name>
+		<jsp-file>/view/register/status.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>application-status</servlet-name>
+		<url-pattern>/application-status</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>get-application-status</servlet-name>
+		<servlet-class>controller.register.ApplicationStatus</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>get-application-status</servlet-name>
+		<url-pattern>/application/status</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>account-create</servlet-name>
 		<jsp-file>/view/register/register.jsp</jsp-file>
 	</servlet>

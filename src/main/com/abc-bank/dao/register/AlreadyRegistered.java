@@ -111,4 +111,20 @@ public class AlreadyRegistered {
             return true;
         }
     }
+
+    public static boolean isRegistered(String email) {
+        try{
+            Connection con = dao.Connection.Connection.getConnection("customers");
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM customers WHERE email = ?");
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                return true;
+            }
+            return false;
+        }catch(Exception e){
+            System.out.println(e + " - " + e.getMessage());
+            return false;
+        }
+    }
 }

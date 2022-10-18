@@ -1,12 +1,14 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
-<%@ page import="com.google.gson.JsonObject, com.google.gson.JsonParser, model.authentication.Login" %>
+<%@ page import="com.google.gson.JsonObject, com.google.gson.JsonParser, model.authentication.Login, javax.servlet.http.HttpSession" %>
 
 <%
     try{
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         if((username != null && password != null) && Login.isVerifiedUser(username, password)){
+            session.setAttribute("customer_name", username);
+            session.setAttribute("logged_time", System.currentTimeMillis());
             response.sendRedirect("index.jsp");
         }
         else if((username != null || password != null) || (username == "" || password == "")){
@@ -94,6 +96,7 @@
                     <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/atm">ATM</a>
                     <a class="nav-item nav-link active" href="http://localhost:8080/abc-bank/login">Login</a>
                     <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/register">Register</a>
+                    <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/about">Application Status</a>
                 </div>
             </div>
         </nav>

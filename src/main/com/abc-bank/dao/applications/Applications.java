@@ -46,4 +46,34 @@ public class Applications {
             System.out.println(e + " in updateApplication_log for dao.applications");
         }
     }
+
+    public static String getApplicationStatus(String email) {
+        try{
+            Connection connection = dao.Connection.Connection.getConnection("applications");
+            java.sql.PreparedStatement preparedStatement = connection.prepareStatement("SELECT status FROM applications WHERE email = ?");
+            preparedStatement.setString(1, email);
+            java.sql.ResultSet resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()){
+                return resultSet.getString("status");
+            }
+        }catch (Exception e){
+            System.out.println(e + " in getApplicationStatus for dao.applications");
+        }
+        return null;
+    }
+
+    public static String getApplicationStatus_from_log(String email) {
+        try{
+            Connection con = dao.Connection.Connection.getConnection("applications");
+            java.sql.PreparedStatement preparedStatement = con.prepareStatement("SELECT status FROM applications_log WHERE email = ? ORDER BY applied_on DESC LIMIT 1");
+            preparedStatement.setString(1, email);
+            java.sql.ResultSet resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()){
+                return resultSet.getString("status");
+            }
+        }catch (Exception e){
+            System.out.println(e + " in getApplicationStatus_from_log for dao.applications");
+        }
+        return null;
+    }
 }
