@@ -3,7 +3,6 @@ package dao.admin;
 import com.google.gson.JsonObject;
 
 import javax.mail.Session;
-import javax.servlet.http.HttpSession;
 import java.sql.Connection;
 
 public class GetReviewForm {

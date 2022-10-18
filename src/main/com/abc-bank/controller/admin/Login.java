@@ -3,10 +3,12 @@ package controller.admin;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import javax.mail.Session;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class Login extends HttpServlet {
@@ -25,6 +27,8 @@ public class Login extends HttpServlet {
                 response.getWriter().println(json);
             } else if (json.get("status").getAsString().equals("200")) {
                 response.setStatus(200);
+                HttpSession session = request.getSession();
+                session.setAttribute("username", jsonObject.get("username").getAsString());
                 response.getWriter().println(json);
             } else {
                 response.setStatus(400);

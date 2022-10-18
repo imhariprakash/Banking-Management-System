@@ -84,11 +84,6 @@
                 <p class="center-text top-margin">Forgot <a
                         href="forgot-password">Username / Password</a></p>
             </div>
-            <div>
-                <p class="center-text top-margin">Don't have an
-                    account? <a
-                        href="register">Register</a></p>
-            </div>
         </div>
     </body>
 
@@ -132,9 +127,10 @@
             let response = sendRequest(url, data);
             response.then (function (response){
                 let result = JSON.parse(response);
+                console.log(result);
                 if(result.status == "200"){
                     alert("Login Successful");
-                    Window.location.href = "http://localhost:8080/admin/dashboard";
+                    window.location.replace("http://localhost:8080/abc-bank/admin/dashboard");
                 }else{
                     alert(result.message);
                 }

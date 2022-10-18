@@ -24,6 +24,7 @@ public class Applications {
     public static void deleteApplication(String email) {
         try{
             Connection connection = dao.Connection.Connection.getConnection("applications");
+            System.out.println("Deleting application for " + email);
             java.sql.PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM applications WHERE email = ?");
             preparedStatement.setString(1, email);
             preparedStatement.executeUpdate();

@@ -47,8 +47,6 @@ function approve(){
     }
 
     submit();
-    
-    alert("Account created successfully and notified client!");               
 }
 
 function reject(){
@@ -116,15 +114,13 @@ function submit(){
         dob: document.getElementById("dob").value.trim().replace("/", "-")
     };
 
-    console.log(data);
-
     let response = sendRequest(url, data, "POST");
     response.then(function(response){
         let result = JSON.parse(response);
         console.log(result);
         if(result.status == 200){
             alert("Account created successfully and notified client!");
-            window.location.href = "http://localhost:8080/abc-bank/login";
+            window.location.href = "http://localhost:8080/abc-bank/admin/dashboard";
         }
         else{
             alert(result.message);
@@ -213,7 +209,7 @@ function validate_phone(elementId){
 
 function validate_aadhar(elementId){   
             
-    var regexp=/^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/;
+    var regexp=/^[2-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$/;
            
     var aadhar = document.getElementById(elementId).value.trim();
     if(aadhar === ""){
@@ -223,7 +219,7 @@ function validate_aadhar(elementId){
         return true;
     }
     else{ 
-        alert("Invalid Aadhar no : type with spaces.");
+        alert("Invalid Aadhar no : type 12 digits without spaces");
         return false;
     }
 }
@@ -287,6 +283,19 @@ function validate_age(elementId){
     return true;
 }
 
+function validate_notes(elementId){
+    var notes = document.getElementById(elementId).value.trim();
+    if(notes.length > 250){
+        alert("Must be not be greater than 250 letters");
+        return false;
+    }
+//    if(/^[A-Za-z0-9\s,'-!]*$/.test(notes)){
+//        return true;
+//    }
+    //alert("Only alphabets, numbers, spaces, commas, hyphens, exclamation and apostrophes are allowed!");
+    return true;
+}
+
 
 
 // async request calls
@@ -305,10 +314,12 @@ async function sendRequest(url, data, method){
 
    return fetch(url, requestOptions)
   .then(response => {return response.text()})
-  .catch(error => console.log('error', error));
-    
-
-}
+  .catch(function(error) {
+    if(error == "401"){
+        alert("Admin : You are not logged in or your session has expired. Please login again.");
+        window.location.href = "login.html";
+    }});
+  }
 
 
 

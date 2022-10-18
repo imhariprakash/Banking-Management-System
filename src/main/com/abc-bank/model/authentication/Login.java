@@ -7,6 +7,9 @@ public class Login {
     private Login() {
     }
 
+    public static boolean isVerifiedUser(String userName,String password) {
+        return isVerifiedUser(userName, password,new JsonObject());
+    }
     public static boolean isVerifiedUser(String username, String password, JsonObject response) {
         String passkey = dao.login.Netbanking.getPassword(username, response);
         if(password.equals(passkey)){

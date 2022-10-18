@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page import="com.google.gson.JsonObject, model.admin.review.GetReviewForm, model.authentication.Login" %>
+<%@ page import="com.google.gson.JsonObject, model.admin.review.GetReviewForm" %>
 
 <%
     String username = (String) session.getAttribute("username");
