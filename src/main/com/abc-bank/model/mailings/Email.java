@@ -42,6 +42,18 @@ public class Email {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    } // Prevents instantiation
+    }
+
+    public static void forgotPassword(int otp, String email) {
+        String subject = "Hello from ABC Bank! Here is your forgot password OTP";
+        String body = "Your OTP is " + otp;
+        send(email, subject, body);
+    }
+
+    public static void passwordChanged(String email) {
+        String subject = "Hello from ABC Bank! Your password has been changed";
+        String body = "Your password has been changed";
+        send(email, subject, body);
+    }
 
 }

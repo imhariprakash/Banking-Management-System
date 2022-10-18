@@ -5,30 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9353c209-e9eb-410c-812c-b0f7daa9024e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/admin/RejectApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/accounts/CreateAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/applications/Applications.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/accounts/CreateAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/accounts/Mail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/accounts/RejectApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/admin/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/reset_password/Password.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/reset_password/VerifyForgotPassword.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/reset_password/VerifyOTP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/admin/GetReviewForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/admin/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/login/Password.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/otp/ForgotPassword.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/utility/GetEmail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/admin/login/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/admin/review/GetReviewForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/PasswordValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/admin/dashboard/dashboard.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/admin/login/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/30c72caf1c5a65af37478e4c041ac52b6a0154c5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/4/64b913048b0991b0b5844ff5821209d4db5f87f3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/763cc74f4247e4b6f2cbf2f2922c505ca0bfb9c5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/9496827699b45f2da5287be7eb64ad344c16b364" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/2/d2bfe2999eb40e180584aa1c318330dfc8273d93" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/ea61b2455360b3f5a1e1ffc2e061a64aed9231c1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/ef9cf8e9d792a00c728a98ce09293465c530bf58" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9edf5fbdfc72f750ef8bbdbf67bd342e7a09f1b2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c3bbbc6780bb630003948ac1d025585dabb01542" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/controller/admin/CreateAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/controller/admin/CreateAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/dao/register/AlreadyRegistered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/register/AlreadyRegistered.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/dao/register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/dao/register/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/ValidateApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/validation/ValidateApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/abc-bank/model/mailings/Email.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/abc-bank/model/mailings/Email.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/admin/review/account/review.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/admin/review/account/review.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/register/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/reset_password/reset_password.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/reset_password/reset_password.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,13 +68,16 @@
     <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="2GAu6hS0RrMVjHF8RH4R5TBI1FR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -135,6 +137,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

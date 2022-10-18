@@ -1,5 +1,22 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import="com.google.gson.JsonObject, model.admin.review.GetReviewForm, model.authentication.Login" %>
+
+<%
+    String username = (String) session.getAttribute("username");
+    JsonObject json = GetReviewForm.getReviewForm(username);
+
+    String aadhar = "'" + json.get("aadhar").getAsString() + "'";
+    String address = "'" + json.get("address").getAsString() + "'";
+    String cust_name = "'" + json.get("cust_name").getAsString() + "'";
+    String dob = "'" + json.get("dob").getAsString() + "'";
+    String email = "'" + json.get("email").getAsString() + "'";
+    String father_name = "'" + json.get("father_name").getAsString() + "'";
+    String notes = "'" + json.get("notes").getAsString() + "'";
+    String pan = "'" + json.get("pan").getAsString() + "'";
+    String phone = "'" + json.get("phone").getAsString() + "'";
+    String pincode = "'" + json.get("pincode").getAsString() + "'";
+%>
 
 
 <html>
@@ -159,6 +176,8 @@
                         rows="3" placeholder="Review message"></textarea>
                 </div>
 
+                <br><br>
+
                 <div class="d-flex flex-column justify-content-between">
                     <button class="btn btn-large btn-success btn-primary btn-lg" name="approve-btn" id="approve-btn" onclick="approve()">Approve</button>
                     <br>
@@ -194,5 +213,18 @@
         <!-- End Script for Form -->
 
     </body>
+
+    <script>
+        document.getElementById("name").value =  <%=cust_name%>;
+        document.getElementById("f_name").value = <%=father_name%>;
+        document.getElementById("email").value = <%=email%>;
+        document.getElementById("phone").value = <%=phone%>;
+        document.getElementById("aadhar").value = <%=aadhar%>;
+        document.getElementById("pan").value = <%=pan%>;
+        document.getElementById("address").value = <%=address%>;
+        document.getElementById("pincode").value = <%=pincode%>;
+        document.getElementById("dob").value = <%=dob%>;
+        document.getElementById("notes").value = <%=notes%>;
+    </script>
 
 </html>

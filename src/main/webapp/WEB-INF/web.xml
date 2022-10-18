@@ -78,7 +78,52 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>password_reset</servlet-name>
-		<url-pattern>/password-reset</url-pattern>
+		<url-pattern>/reset/password</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>admin_login</servlet-name>
+		<jsp-file>/view/admin/login/login.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin_login</servlet-name>
+		<url-pattern>/login/admin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>adminLogin</servlet-name>
+		<servlet-class>controller.admin.Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminLogin</servlet-name>
+		<url-pattern>/admin/login</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>admin-dashboard</servlet-name>
+		<jsp-file>/view/admin/dashboard/dashboard.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin-dashboard</servlet-name>
+		<url-pattern>/admin/dashboard</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>password-reset</servlet-name>
+		<servlet-class>controller.reset_password.Password</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>password-reset</servlet-name>
+		<url-pattern>/password</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>verify-forgot-password</servlet-name>
+		<servlet-class>controller.reset_password.VerifyForgotPassword</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>verify-forgot-password</servlet-name>
+		<url-pattern>/forgot-password/otp</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
