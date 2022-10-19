@@ -48,6 +48,7 @@ public class Register {
         }catch(Exception e){
             System.out.println("Error in Register.java from dao.register");
             System.out.println(e);
+            e.printStackTrace();
             response.addProperty("status", "500");
             response.addProperty("message", "Internal server error");
         }
@@ -86,6 +87,7 @@ public class Register {
         }catch(Exception e){
             System.out.println("Error in Register.java from dao.register");
             System.out.println(e);
+            e.printStackTrace();
             response.addProperty("status", "500");
             response.addProperty("message", "Internal server error");
         }

@@ -10,20 +10,7 @@ public class Transaction {
             String amount = jsonRequest.get("amount").getAsString();
             String description = jsonRequest.get("description").getAsString();
 
-            dao.transactions.UpdateBalance.subtractBalance(from_account, Long.parseLong(amount), json);
-            if (json.get("status").getAsString().equals("500")) {
-                dao.transactions.rollbacks.NetbankingTransaction.rollbackFrom(from_account, Long.parseLong(amount));
-                return;
-            }
-            String uuid = java.util.UUID.randomUUID().toString();
-
-            dao.transactions.UpdateDebit.debit(from_account, Long.parseLong(amount), uuid, json);
-
-            if(json.get("status").getAsString().equals("500")){
-                dao.transactions.rollbacks.NetbankingTransaction.rollbackFrom(from_account, Long.parseLong(amount));
-                dao.transactions.rollbacks.NetbankingTransaction.rollbackTo(to_account, Long.parseLong(amount));
-                return;
-            }
+            // debit and credit will be done - roll back in case of failure !
 
             dao.transactions.netbanking.Transaction.transact(from_account, to_account, Long.parseLong(amount), description, json);
 

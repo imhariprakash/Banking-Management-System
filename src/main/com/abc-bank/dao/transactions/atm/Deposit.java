@@ -18,7 +18,7 @@ public class Deposit {
 
         // update transactions - dual entry system log
 
-        dao.transactions.UpdateTransactions.addTransaction(accountNumber, amount, atmId, "atm", description, response);
+        dao.transactions.UpdateTransactions.addTransaction(accountNumber, amount, atmId, "atm", description, "deposit", response);
 
         if(response.get("status").getAsString().equals("500")){
             System.out.println("Rolling back transaction");

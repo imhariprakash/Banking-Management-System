@@ -11,10 +11,20 @@ import java.io.IOException;
 
 public class SendMoney extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        
+
         try{
+            HttpSession session = request.getSession();
             JsonObject jsonRequest = JsonParser.parseReader(request.getReader()).getAsJsonObject();
-            String from_account = dao.utility.GetAccountNumber.getAccountNumber(jsonRequest.get("customer_id").getAsString());
+            String from_account = dao.utility.GetAccountNumber.getAccountNumber(session.getAttribute("customer_id").toString());
+            String to_account = jsonRequest.get("to_account").getAsString();
+            if(from_account.equals(to_account)){
+                response.setStatus(400);
+                JsonObject jsonResponse = new JsonObject();
+                jsonResponse.addProperty("status", "400");
+                jsonResponse.addProperty("message", "You cannot send money to your own account");
+                response.getWriter().println(jsonResponse);
+                return;
+            }
             jsonRequest.addProperty("from_account", from_account);
             JsonObject json = new JsonObject();
             model.transactions.Transaction.send(jsonRequest, json);

@@ -14,6 +14,8 @@ public class UpdateBalance {
             ps.setLong(1, amount);
             ps.setString(2, accountNumber);
             ps.executeUpdate();
+            response.addProperty("status", "200");
+            response.addProperty("message", "Balance updated successfully");
         }catch(Exception e){
             System.out.println(e + " in UpdateBalance for dao.transactions");
             response.addProperty("message", "Internal server error");
@@ -29,7 +31,10 @@ public class UpdateBalance {
             ps.setLong(1, amount);
             ps.setString(2, accountNumber);
             ps.executeUpdate();
+            response.addProperty("status", "200");
+            response.addProperty("message", "Balance updated successfully");
         }catch(Exception e){
+            e.printStackTrace();
             System.out.println(e + " in UpdateBalance for dao.transactions");
             response.addProperty("message", "Internal server error");
             response.addProperty("status", "500");

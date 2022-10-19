@@ -32,6 +32,7 @@ public class Register extends HttpServlet {
         }catch (Exception e){ // This is almost never reached because of the try-catch in the model
             System.out.println("Error in Register.java from controller.register");
             System.out.println(e);
+            e.printStackTrace();
             response.setStatus(400);
             JsonObject jsonResponse = new JsonObject();
             jsonResponse.addProperty("status", "400");

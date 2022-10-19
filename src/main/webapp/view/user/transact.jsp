@@ -8,8 +8,6 @@
         response.sendRedirect("/abc-bank/login");
     }
 
-
-
 %>
 
 
@@ -210,7 +208,7 @@
                 }
 
                 let otp = document.getElementById("otp").value;
-                let url = "http://localhost:8080/abc-bank/user/otp?otp=" + otp;
+                let url = "http://localhost:8080/abc-bank/user/verify-otp";
                 let data = {
                     "otp": otp
                 };
@@ -274,11 +272,12 @@
                     let result = JSON.parse(response); // promise response
                     console.log(result);
                     if(result.status == 200){
+                        let to = document.getElementById("to").value;
                         alert("Successfully transferred " + "₹" + amount + " to " + to);
                         window.location.href = "http://localhost:8080/abc-bank/home";
                     }
                     else{
-                        alert(status.message);
+                        alert(result.message);
                         window.location.href = "http://localhost:8080/abc-bank/transaction";
                     }
                 });

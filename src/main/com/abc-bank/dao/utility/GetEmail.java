@@ -16,7 +16,7 @@ public class GetEmail {
             java.sql.ResultSet resultSet = preparedStatement.executeQuery();
             if(resultSet.next()){
                 responseJson.addProperty("status", "200");
-                responseJson.addProperty("message", "Email found");
+                responseJson.addProperty("message", "Email Fetched");
                 return resultSet.getString("email");
             }else{
                 responseJson.addProperty("status", "400");

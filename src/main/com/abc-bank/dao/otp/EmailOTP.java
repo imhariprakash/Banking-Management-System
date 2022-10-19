@@ -17,6 +17,7 @@ public class EmailOTP {
             ps.setInt(2, otp);
             ps.executeUpdate();
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println(e);
         }
 
@@ -28,6 +29,7 @@ public class EmailOTP {
             ps.setTimestamp(3, new java.sql.Timestamp(new java.util.Date().getTime()));
             ps.executeUpdate();
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println(e);
         }
     }
@@ -46,6 +48,7 @@ public class EmailOTP {
                 }
             }
         }catch(Exception e){
+            e.printStackTrace();
             System.out.println(e);
         }
         return false;
@@ -57,11 +60,13 @@ public class EmailOTP {
             String time_created = getTimeCreated(email, otp);
             String query = "UPDATE email_otp_log SET time_verified = ? WHERE email = ? AND otp = ? AND time_created = ?";
             java.sql.PreparedStatement ps = con.prepareStatement(query);
-            ps.setString(1, email);
-            ps.setInt(2, otp);
-            ps.setTimestamp(3, time_verified);
+            ps.setTimestamp(1, time_verified);
+            ps.setString(2, email);
+            ps.setInt(3, otp);
+            ps.setString(4, time_created);
             ps.executeUpdate();
         }catch(Exception e){
+            e.printStackTrace();
             System.out.println(e);
         }
     }
@@ -78,6 +83,7 @@ public class EmailOTP {
                 return rs.getString("time_created");
             }
         }catch(Exception e){
+            e.printStackTrace();
             System.out.println(e);
         }
         return null;
@@ -91,6 +97,7 @@ public class EmailOTP {
             ps.setString(1, email);
             ps.executeUpdate();
         }catch(Exception e){
+            e.printStackTrace();
             System.out.println(e);
         }
     }
@@ -103,6 +110,7 @@ public class EmailOTP {
             ps.setTimestamp(1, new java.sql.Timestamp(new java.util.Date().getTime() - 1000 * 60 * 5));
             ps.executeUpdate();
         }catch(Exception e){
+            e.printStackTrace();
             System.out.println(e);
         }
     }

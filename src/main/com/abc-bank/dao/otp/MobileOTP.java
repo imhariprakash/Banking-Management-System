@@ -20,6 +20,7 @@ public class MobileOTP {
         } catch (Exception e) {
             // TODO: handle exception
             //System.out.println(e);
+            e.printStackTrace();
         }
 
         query = "INSERT INTO mobile_otp_log (mobile, otp, time_created) VALUES (?, ?, ?)";
@@ -32,6 +33,7 @@ public class MobileOTP {
         } catch (Exception e) {
             // TODO: handle exception
             //System.out.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -51,6 +53,7 @@ public class MobileOTP {
         }catch(Exception e){
             // TODO : handle exception
             //System.out.println(e);
+            e.printStackTrace();
         }
         return false;
     }

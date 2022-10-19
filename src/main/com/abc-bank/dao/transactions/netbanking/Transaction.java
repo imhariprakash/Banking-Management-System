@@ -27,7 +27,7 @@ public class Transaction {
 
         // update transaction
 
-        dao.transactions.UpdateTransactions.addTransaction(from_account, amount, uuid.toString(), "netbanking", description, response);
+        dao.transactions.UpdateTransactions.addTransaction(from_account, amount, uuid.toString(), "netbanking", description, "money transfer", response);
 
     }
 }

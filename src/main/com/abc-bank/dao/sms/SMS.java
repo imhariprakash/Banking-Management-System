@@ -18,6 +18,7 @@ public class SMS {
             con.close();
         } catch (Exception e) {
             System.out.println(e);
+            e.printStackTrace();
         }
         return twilioAccountSID;
     }
@@ -34,6 +35,7 @@ public class SMS {
             con.close();
         } catch (Exception e) {
             System.out.println(e);
+            e.printStackTrace();
         }
         return twilioAuthToken;
     }

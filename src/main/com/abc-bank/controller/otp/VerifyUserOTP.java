@@ -23,6 +23,8 @@ public class VerifyUserOTP extends HttpServlet {
             if(dao.otp.EmailOTP.verifyOTP(email, Integer.parseInt(otp))){
                 dao.otp.EmailOTP.updateDB(email, Integer.parseInt(otp), Timestamp.valueOf(java.time.LocalDateTime.now()));
                 dao.otp.EmailOTP.deleteOTP(email);
+                jsonResponse.addProperty("status", "200");
+                jsonResponse.addProperty("message", "OTP Verified");
                 response.getWriter().println(jsonResponse);
             }
 

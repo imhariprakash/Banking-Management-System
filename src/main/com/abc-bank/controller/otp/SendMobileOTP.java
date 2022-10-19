@@ -61,6 +61,7 @@ public class SendMobileOTP extends HttpServlet {
 
         } catch (Exception e) {
             // TODO: handle exception
+            e.printStackTrace();
             System.out.println(e);
             JsonObject jsonObject = new JsonObject();
             jsonObject.addProperty("status", "500");

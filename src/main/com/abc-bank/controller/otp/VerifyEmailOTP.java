@@ -52,6 +52,7 @@ public class VerifyEmailOTP extends HttpServlet {
                 response.getWriter().println(json);
             }
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println(e);
             response.setStatus(500);
             response.setContentType("application/json");
