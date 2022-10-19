@@ -1,6 +1,6 @@
 package dao.email;
 
-import dao.Connection.Connection;
+import dao.connection.Connection;
 
 public class Email {
     private Email() {

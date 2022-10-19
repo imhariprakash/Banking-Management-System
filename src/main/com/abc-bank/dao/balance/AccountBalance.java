@@ -11,7 +11,7 @@ public class AccountBalance {
     public static long getBalance(String accountNumber, JsonObject json) {
         long balance = 0;
         try {
-            Connection con = dao.Connection.Connection.getConnection("customers");
+            Connection con = dao.connection.Connection.getConnection("customers");
             java.sql.PreparedStatement ps = con.prepareStatement("select balance from balance where account_number = ?");
             ps.setString(1, accountNumber);
             java.sql.ResultSet rs = ps.executeQuery();

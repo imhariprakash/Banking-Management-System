@@ -12,7 +12,7 @@ public class AlreadyRegistered {
 
             // check customer database
 
-            Connection con = dao.Connection.Connection.getConnection("customers");
+            Connection con = dao.connection.Connection.getConnection("customers");
             PreparedStatement ps = con.prepareStatement("SELECT * FROM customers WHERE email = ?");
             ps.setString(1, email);
             ResultSet rs = ps.executeQuery();
@@ -58,7 +58,7 @@ public class AlreadyRegistered {
 
             // check applications db - whether already applied
             con.close();
-            con = dao.Connection.Connection.getConnection("applications");
+            con = dao.connection.Connection.getConnection("applications");
 
             // check if email is already applied - pending
 
@@ -114,7 +114,7 @@ public class AlreadyRegistered {
 
     public static boolean isRegistered(String email) {
         try{
-            Connection con = dao.Connection.Connection.getConnection("customers");
+            Connection con = dao.connection.Connection.getConnection("customers");
             PreparedStatement ps = con.prepareStatement("SELECT * FROM customers WHERE email = ?");
             ps.setString(1, email);
             ResultSet rs = ps.executeQuery();

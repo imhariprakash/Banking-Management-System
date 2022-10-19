@@ -16,6 +16,7 @@ public class CreateAccount extends HttpServlet {
         response.setHeader("Access-Control-Allow-Methods", "POST");
         response.setHeader("Access-Control-Max-Age", "3600");
 
+
         JsonObject json = new JsonObject();
         HttpSession session = request.getSession();
         String verified_by = (String) session.getAttribute("username");

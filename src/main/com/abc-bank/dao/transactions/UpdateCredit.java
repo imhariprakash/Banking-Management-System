@@ -10,7 +10,7 @@ public class UpdateCredit {
 
     public static void updateCredit(String accountNumber, long amount, String source, String sourceId, JsonObject response) {
         try {
-            Connection con = dao.Connection.Connection.getConnection("transactions");
+            Connection con = dao.connection.Connection.getConnection("transactions");
             java.sql.PreparedStatement ps = con.prepareStatement("insert into credit (account_number, credit_amount, credit_date, credit_source, credit_source_id) values (?, ?, ?, ?, ?)");
             ps.setString(1, accountNumber);
             ps.setLong(2, amount);

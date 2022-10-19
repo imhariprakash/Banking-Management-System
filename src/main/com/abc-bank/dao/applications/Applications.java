@@ -8,7 +8,7 @@ public class Applications {
 
     public static String getAppliedOn(String email) {
         try{
-            Connection connection = dao.Connection.Connection.getConnection("applications");
+            Connection connection = dao.connection.Connection.getConnection("applications");
             java.sql.PreparedStatement preparedStatement = connection.prepareStatement("SELECT applied_on FROM applications WHERE email = ?");
             preparedStatement.setString(1, email);
             java.sql.ResultSet resultSet = preparedStatement.executeQuery();
@@ -23,7 +23,7 @@ public class Applications {
 
     public static void deleteApplication(String email) {
         try{
-            Connection connection = dao.Connection.Connection.getConnection("applications");
+            Connection connection = dao.connection.Connection.getConnection("applications");
             java.sql.PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM applications WHERE email = ?");
             preparedStatement.setString(1, email);
             preparedStatement.executeUpdate();
@@ -34,7 +34,7 @@ public class Applications {
 
     public static void updateApplication_log(String email, String applied_on, String status, String verified_by) {
         try{
-            Connection connection = dao.Connection.Connection.getConnection("applications");
+            Connection connection = dao.connection.Connection.getConnection("applications");
             java.sql.PreparedStatement preparedStatement = connection.prepareStatement("UPDATE applications_log SET status = ?, verified_by = ?, verified_on = ? WHERE email = ? AND applied_on = ?");
             preparedStatement.setString(1, status);
             preparedStatement.setString(2, verified_by);
@@ -49,7 +49,7 @@ public class Applications {
 
     public static String getApplicationStatus(String email) {
         try{
-            Connection connection = dao.Connection.Connection.getConnection("applications");
+            Connection connection = dao.connection.Connection.getConnection("applications");
             java.sql.PreparedStatement preparedStatement = connection.prepareStatement("SELECT status FROM applications WHERE email = ?");
             preparedStatement.setString(1, email);
             java.sql.ResultSet resultSet = preparedStatement.executeQuery();
@@ -64,7 +64,7 @@ public class Applications {
 
     public static String getApplicationStatus_from_log(String email) {
         try{
-            Connection con = dao.Connection.Connection.getConnection("applications");
+            Connection con = dao.connection.Connection.getConnection("applications");
             java.sql.PreparedStatement preparedStatement = con.prepareStatement("SELECT status FROM applications_log WHERE email = ? ORDER BY applied_on DESC LIMIT 1");
             preparedStatement.setString(1, email);
             java.sql.ResultSet resultSet = preparedStatement.executeQuery();

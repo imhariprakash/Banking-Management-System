@@ -12,8 +12,8 @@ public class Netbanking {
     public static String getPassword(String username, JsonObject response) {
         String password = null;
         try{
-            Connection con = dao.Connection.Connection.getConnection("customers");
-            java.sql.PreparedStatement ps = con.prepareStatement("select password from netbanking where username = ?");
+            Connection con = dao.connection.Connection.getConnection("customers");
+            java.sql.PreparedStatement ps = con.prepareStatement("select password from netbanking where customer_id = ?");
             ps.setString(1, username);
             java.sql.ResultSet rs = ps.executeQuery();
             if(rs.next()){
@@ -31,7 +31,7 @@ public class Netbanking {
 
     public static void resetPassword(String username, String password, JsonObject response) {
         try{
-            Connection con = dao.Connection.Connection.getConnection("customers");
+            Connection con = dao.connection.Connection.getConnection("customers");
             java.sql.PreparedStatement ps = con.prepareStatement("update netbanking set password = ? where username = ?");
             ps.setString(1, password);
             ps.setString(2, username);

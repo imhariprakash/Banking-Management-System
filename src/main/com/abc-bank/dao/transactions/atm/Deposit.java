@@ -6,7 +6,7 @@ public class Deposit {
     private Deposit() {
     } // private constructor
 
-    public static void deposit(String accountNumber, long amount, String atmId, JsonObject response) {
+    public static void deposit(String accountNumber, long amount, String atmId, String description, JsonObject response) {
         // update balance
 
         dao.transactions.UpdateBalance.addBalance(accountNumber, amount, response);
@@ -18,7 +18,7 @@ public class Deposit {
 
         // update transactions - dual entry system log
 
-        dao.transactions.UpdateTransactions.addTransaction(accountNumber, amount, atmId, response);
+        dao.transactions.UpdateTransactions.addTransaction(accountNumber, amount, atmId, "atm", description, response);
 
         if(response.get("status").getAsString().equals("500")){
             System.out.println("Rolling back transaction");

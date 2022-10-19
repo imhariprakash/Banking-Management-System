@@ -1,20 +1,24 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<%
-    try{
-        String username = session.getAttribute("username").toString();
-    }catch(Exception e){
-        response.sendRedirect("http://localhost:8080/abc-bank/");
-    }
-%>
+<%@ page import="dao.utility.GetCustomerName, javax.servlet.http.HttpSession" %>
 
+<%
+    String customer_name = "";
+    try{
+        String customer_id = session.getAttribute("customer_id").toString();
+        customer_name = GetCustomerName.getCustomerName(customer_id);
+    }catch(Exception e){
+        response.sendRedirect("/abc-bank/login");
+    }
+
+%>
 
 <!doctype html>
 <html lang="en">
 
     <head>
-        <title>Admin Dashboard</title>
+        <title>Home</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1,
@@ -50,7 +54,7 @@
                 width: 50%;
                 position:relative;
                 top:100px;
-                left:340px;
+                left:270px;
                 margin: 0 auto;
             }
 
@@ -58,16 +62,16 @@
     </head>
 
     <body class="body-color">
-        <h1 id="inner">Welcome User!</h1>
+        <h1 id="inner">Welcome <%=customer_name%>!</h1>
         <div class="center login-block-color padding">
 
             <div class="d-flex flex-column">
-                <div class="btn btn-success btn-lg center-text" onclick="review_applications()">Review Applications</div>
-                <div class="btn btn-success btn-lg center-text">View Applications</div>
-                <div class="btn btn-success btn-lg center-text">Review particular application</div>
-                <div class="btn btn-success btn-lg center-text">Change Password</div>
-                <div class="btn btn-success btn-lg center-text">View Customer Details</div>
-                <div class="btn btn-success btn-lg center-text">Log out</div>
+                <div class="btn btn-success btn-lg center-text" onclick="show_balance()">Show Balance</div>
+                <div class="btn btn-success btn-lg center-text" onclick="show_transactions()">Show Transactions</div>
+                <div class="btn btn-success btn-lg center-text" onclick="atm()">ATM</div>
+                <div class="btn btn-success btn-lg center-text" onclick=change_password()>Change Password</div>
+                <div class="btn btn-success btn-lg center-text" onclick="transaction()">Online transaction</div>
+                <div class="btn btn-success btn-lg center-text" onclick="logout()">Log out</div>
             </div>
 
         </div>
@@ -87,8 +91,28 @@
     </body>
 
     <script>
-        function review_applications(){
-            window.location.location = "http://localhost:8080/abc-bank/admin/review";
+        function show_balance(){
+            window.location.href = "http://localhost:8080/abc-bank/user/balance";
+        }
+
+        function show_transactions(){
+            window.location.href = "http://localhost:8080/abc-bank/user/transactions";
+        }
+
+        function atm(){
+            window.location.href = "http://localhost:8080/abc-bank/atm";
+        }
+
+        function change_password(){
+            window.location.href = "http://localhost:8080/abc-bank/reset/password";
+        }
+
+        function transaction(){
+            window.location.href = "http://localhost:8080/abc-bank/transaction";
+        }
+
+        function logout(){
+            window.location.href = "http://localhost:8080/abc-bank/logout";
         }
     </script>
 

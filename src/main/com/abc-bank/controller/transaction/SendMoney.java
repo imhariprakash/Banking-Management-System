@@ -1,0 +1,36 @@
+package controller.transaction;
+
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+
+public class SendMoney extends HttpServlet {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        
+        try{
+            JsonObject jsonRequest = JsonParser.parseReader(request.getReader()).getAsJsonObject();
+            String from_account = dao.utility.GetAccountNumber.getAccountNumber(jsonRequest.get("customer_id").getAsString());
+            jsonRequest.addProperty("from_account", from_account);
+            JsonObject json = new JsonObject();
+            model.transactions.Transaction.send(jsonRequest, json);
+            if(json.get("status").getAsString().equals("200")) {
+                response.setStatus(200);
+                response.getWriter().println(json);
+            }else{
+                response.setStatus(400);
+                response.getWriter().println(json);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+            response.setStatus(400);
+            JsonObject json = new JsonObject();
+            json.addProperty("status", "400");
+            json.addProperty("message", "Bad Request");
+        }
+    }
+}

@@ -1,6 +1,6 @@
 package dao.otp;
 
-import dao.Connection.Connection;
+import dao.connection.Connection;
 
 import java.sql.Timestamp;
 

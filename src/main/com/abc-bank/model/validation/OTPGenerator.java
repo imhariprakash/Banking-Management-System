@@ -21,7 +21,7 @@ public class OTPGenerator {
 
         int otp = 0;
 
-        for (int i = 0; i < len; i++)
+        while(String.valueOf(otp).length() < len)
         {
             // Use of charAt() method : to get character value
             // Use of nextInt() as it is scanning the value as int

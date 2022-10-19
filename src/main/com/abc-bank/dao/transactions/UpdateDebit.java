@@ -12,7 +12,7 @@ public class UpdateDebit {
         // update balance
 
         try{
-            Connection con = dao.Connection.Connection.getConnection("transactions");
+            Connection con = dao.connection.Connection.getConnection("transactions");
             java.sql.PreparedStatement ps = con.prepareStatement("INSERT INTO debit(account_number, debit_amount, debit_date, debit_source, debit_source_id) VALUES(?, ?, ?, ?, ?)");
             ps.setString(1, accountNumber);
             ps.setLong(2, amount);

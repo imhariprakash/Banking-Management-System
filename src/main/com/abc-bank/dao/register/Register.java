@@ -2,10 +2,8 @@ package dao.register;
 
 import com.google.gson.JsonObject;
 
-import javax.servlet.http.Part;
 import java.sql.Connection;
 import java.sql.Date;
-import java.sql.Time;
 import java.sql.Timestamp;
 
 public class Register {
@@ -29,7 +27,7 @@ public class Register {
         // ready to insert into database
 
         try{
-            Connection connection = dao.Connection.Connection.getConnection("applications");
+            Connection connection = dao.connection.Connection.getConnection("applications");
             java.sql.PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO applications (cust_name, father_name, email, phone, aadhar, pan, address, notes, pincode, dob, applied_on) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, f_name);
@@ -68,7 +66,7 @@ public class Register {
         Date dob = Date.valueOf(json.get("dob").getAsString());
 
         try{
-            Connection connection = dao.Connection.Connection.getConnection("applications");
+            Connection connection = dao.connection.Connection.getConnection("applications");
             java.sql.PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO applications_log (cust_name, father_name, email, phone, aadhar, pan, address, notes, pincode, dob) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, f_name);

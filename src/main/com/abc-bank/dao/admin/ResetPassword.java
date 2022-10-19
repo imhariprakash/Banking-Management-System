@@ -11,7 +11,7 @@ public class ResetPassword {
 
     public static void reset(String username, String password, JsonObject json) {
         try {
-            Connection connection = dao.Connection.Connection.getConnection("employee");
+            Connection connection = dao.connection.Connection.getConnection("employee");
             PreparedStatement preparedStatement = connection.prepareStatement("UPDATE admin SET password = ? WHERE customer_id = ?");
             preparedStatement.setString(1, password);
             preparedStatement.setString(2, username);

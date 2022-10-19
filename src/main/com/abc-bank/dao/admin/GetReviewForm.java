@@ -2,7 +2,6 @@ package dao.admin;
 
 import com.google.gson.JsonObject;
 
-import javax.mail.Session;
 import java.sql.Connection;
 
 public class GetReviewForm {
@@ -12,7 +11,7 @@ public class GetReviewForm {
     public static JsonObject getReviewForm(String verified_by) {
         JsonObject reviewForm = new JsonObject();
         try{
-            Connection conn = dao.Connection.Connection.getConnection("applications");
+            Connection conn = dao.connection.Connection.getConnection("applications");
             String query = "SELECT * FROM applications ORDER BY applied_on LIMIT 1";
             java.sql.PreparedStatement stmt = conn.prepareStatement(query);
             java.sql.ResultSet rs = stmt.executeQuery();

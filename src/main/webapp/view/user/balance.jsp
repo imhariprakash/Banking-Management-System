@@ -1,12 +1,18 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<%@ page import="dao.utility.GetBalance" %>
+
 <%
+    String customer_id = "";
     try{
-        String username = session.getAttribute("username").toString();
+        customer_id = session.getAttribute("customer_id").toString();
     }catch(Exception e){
-        response.sendRedirect("http://localhost:8080/abc-bank/");
+        response.sendRedirect("/abc-bank/login");
     }
+
+    String balance = GetBalance.getBalance(customer_id);
+
 %>
 
 
@@ -14,7 +20,7 @@
 <html lang="en">
 
     <head>
-        <title>Admin Dashboard</title>
+        <title>Account Balance</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1,
@@ -50,7 +56,7 @@
                 width: 50%;
                 position:relative;
                 top:100px;
-                left:340px;
+                left:270px;
                 margin: 0 auto;
             }
 
@@ -58,16 +64,11 @@
     </head>
 
     <body class="body-color">
-        <h1 id="inner">Welcome User!</h1>
         <div class="center login-block-color padding">
 
             <div class="d-flex flex-column">
-                <div class="btn btn-success btn-lg center-text" onclick="review_applications()">Review Applications</div>
-                <div class="btn btn-success btn-lg center-text">View Applications</div>
-                <div class="btn btn-success btn-lg center-text">Review particular application</div>
-                <div class="btn btn-success btn-lg center-text">Change Password</div>
-                <div class="btn btn-success btn-lg center-text">View Customer Details</div>
-                <div class="btn btn-success btn-lg center-text">Log out</div>
+                <div class="btn btn-success btn-lg center-text"> Your A/C Balance : <%=balance%> </div>
+                <div class="btn btn-success btn-lg center-text" onclick="back()"> Back </div>
             </div>
 
         </div>
@@ -84,12 +85,12 @@
             integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
             crossorigin="anonymous">
         </script>
-    </body>
 
-    <script>
-        function review_applications(){
-            window.location.location = "http://localhost:8080/abc-bank/admin/review";
-        }
-    </script>
+        <script>
+            function back(){
+                window.location.href = "http://localhost:8080/abc-bank/home";
+            }
+        </script>
+    </body>
 
 </html>

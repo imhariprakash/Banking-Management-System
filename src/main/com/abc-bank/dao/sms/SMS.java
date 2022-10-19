@@ -1,6 +1,6 @@
 package dao.sms;
 
-import dao.Connection.Connection;
+import dao.connection.Connection;
 
 public class SMS {
     private SMS() {

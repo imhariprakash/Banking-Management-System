@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,6 +9,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Reset Password</title>
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+            crossorigin="anonymous">
 
         <style>
             .center{
@@ -35,79 +42,106 @@
                 margin-top:10px;
                 border:1px solid #666;
                 height: 50px;
-                width:60%;
+                width:90%;
             }
 
             a:link{
                 text-decoration: none;
             }
 
-            .btn{
-                background-color: #4272d7;
-                color: white;
-                font-family: OpenSans-Regular;
-                font-size: 14px;
-                text-transform:uppercase;
-                align-items:center;
-                height:50px;
-                padding: 0 15px;
-                margin-top:30px;
-                width:60%;
+            .customer_id{
+                display:inline;
+                width:70%;
+                margin-left:20px;
             }
 
-            .center-textbox{
-                margin-left:115px;
+            .adjust-btn{
+                margin-top: 40px;
+                width: 100%;
             }
+
+
 
         </style>
-
-
-
     </head>
     <body class="body-color">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">ABC Bank</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav nav-fill">
+                    <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/home">Home </a>
+                    <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/transaction">Transaction</a>
+                    <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/atm">ATM</a>
+                    <a class="nav-item nav-link active" href="http://localhost:8080/abc-bank/login">Login</a>
+                    <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/register">Register</a>
+                    <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/about">Application Status</a>
+                </div>
+            </div>
+        </nav>
+
         <div class="center login-block-color padding">
-            <h1 class="center-text">Reset Password</h1>
-            <form method="post" onsubmit="event.preventDefault();">
-                <div class="center-text top-margin">
+            <h1 class="center-text">Password Reset</h1>
+            <form onSubmit="return false;">
+                <div class=" top-margin">
                     <input type="text" name="customer_id" id="customer_id"
-                        placeholder=" Customer Id" class="input-properties">
+                        placeholder=" Customer ID" class="input-properties customer_id" required>
+                    <div class="btn btn-success btn-lg" onclick="sendEmail()">Verify</div>
                 </div>
-                <div class="center-text top-margin">
+
+                <div class=" top-margin" style="display:none" id="otpdiv">
                     <input type="text" name="otp" id="otp"
-                        class="input-properties center-textbox"
-                        placeholder=" OTP" style="display:none">
+                        placeholder=" OTP" class="input-properties customer_id" required>
+                    <div class="btn btn-success btn-lg" onclick="verifyOTP()">Send</div>
                 </div>
-                <div class="center-text top-margin">
+
+                <div class=" top-margin" style="display:none" id="password_div">
                     <input type="password" name="password" id="password"
-                        class="input-properties center-textbox"
-                        placeholder=" New Password" style="display:none">
+                        placeholder=" Password" class="input-properties customer_id" required disabled>
                 </div>
-                <div class="center-text">
-                    <input type="button" class="btn" id="send-button"
-                        value="Send password reset mail" onclick="reset()">
+
+                <div class=" top-margin" style="display:none" id="confirm_password_div">
+                    <input type="password" name="confirm_password" id="confirm_password"
+                        placeholder=" Confirm Password" class="input-properties customer_id" required disabled>
                 </div>
+                
+                <div class="btn btn-success btn-lg adjust-btn" onclick="submit()">Submit</div>
             </form>
+            <div>
+                <p class="center-text top-margin"><a
+                        href="/abc-bank/login">Already Have an account / Login</a></p>
+            </div>
+            <div>
+                <p class="center-text top-margin">Don't have an account? <a
+                        href="/abc-bank/register">Register</a></p>
+            </div>
         </div>
     </body>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script
-        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
 
 
 
-    <script>
+        <script>
         $(document).ready(function() {
             $(window).keydown(function(event){
                 if(event.keyCode == 13) {
@@ -117,82 +151,124 @@
             });
         });
 
-        function reset(){
-            alert("reset");
-            if(document.getElementById("otp").disabled == true){
-                if(validateCustomerId()){
-                    var customerId = document.getElementById("customerId").value;
-                    let url = "http://localhost:8080/abc-bank/password";
-                    let data = {
-                        "customer_id": customerId
-                    }
-                    let method = "post";
-                    let response = sendRequest(url, data, method);
-                    response.then(function(response){
-                        let result = JSON.parse(response); // promise response
-                        console.log(result);
-                        if(result.status == 200){
-                            alert("OTP sent to email");
-                            document.getElementById("otp").disabled = false;
-                            document.getElementById("customer_id").disabled = true;
-                        }
-                        else{
-                            alert("error - check your email");
-                            document.getElementById("otp").disabled = true;
-                            document.getElementById("customer_id").disabled = false;
-                        }
-                    });
-                }
-            }else if(validateOTP() && document.getElementById("password").disabled == true){
-                let otp = document.getElementById("otp").value;
-                let url = "http://localhost:8080/abc-bank/forgot-password/otp";
-                let data = {
-                    "customer_id": customerId,
-                    "otp": otp
-                }
-                let method = "post";
-                let response = sendRequest(url, data, method);
-                response.then(function(response){
-                    let result = JSON.parse(response); // promise response
-                    console.log(result);
-                    if(result.status == 200){
-                        alert("OTP verified");
-                        document.getElementById("otp").disabled = true;
-                        document.getElementById("customer_id").disabled = true;
-                        document.getElementById("password").disabled = false;
-                    }
-                    else{
-                        alert("error - check your email");
-                        document.getElementById("otp").disabled = true;
-                        document.getElementById("customer_id").disabled = false;
-                        document.getElementById("password").disabled = true;
-                    }
-                });
-            }else if(validatePassword()){
-                let password = document.getElementById("password").value;
-                let url = "http://localhost:8080/abc-bank/password";
-                let data = {
-                    "customer_id": customerId,
-                    "password": password
-                }
-                let method = "put";
-                let response = sendRequest(url, data, method);
-                response.then(function(response){
-                    let result = JSON.parse(response); // promise response
-                    console.log(result);
-                    if(result.status == 200){
-                        alert("Password changed");
-                        window.location.href = "http://localhost:8080/abc-bank/login";
-                    }
-                    else{
-                        alert("error - check your email");
-                        document.getElementById("otp").disabled = true;
-                        document.getElementById("customer_id").disabled = false;
-                        document.getElementById("password").disabled = true;
-                    }
-                });
+        function sendEmail() {
+            if(!validateCustomerId()) {
+                    return; 
             }
+
+            var customer_id = document.getElementById("customer_id").value;
+
+            let url = "http://localhost:8080/abc-bank/password";
+
+            let data = {
+                "customer_id": customer_id
+            }
+
+            let method = "post";
+
+            let response = sendRequest(url, data, method);
+            response.then(function(response){
+                let result = JSON.parse(response); // promise response
+                console.log(result);
+                if(result.status == 200){
+                    alert("OTP sent to email");
+                    document.getElementById("otp").disabled = false;
+                    document.getElementById("customer_id").disabled = true;
+                    document.getElementById("otpdiv").style.display = "block";
+                }
+                else{
+                    alert("error - check your email");
+                    document.getElementById("otp").disabled = true;
+                    document.getElementById("customer_id").disabled = false;
+                }
+            });
+
         }
+
+        function verifyOTP(){
+            if(!validateOTP()) {
+                    return; 
+            }
+
+            let otp = document.getElementById("otp").value;
+            let customer_id = document.getElementById("customer_id").value;
+            let url = "http://localhost:8080/abc-bank/forgot-password/otp";
+            let data = {
+                "customer_id":customer_id,
+                "otp": otp
+            }
+            console.log(data);
+            let method = "post";
+            let response = sendRequest(url, data, method);
+            response.then(function(response){
+                let result = JSON.parse(response); // promise response
+                console.log(result);
+                if(result.status == 200){
+                    alert("OTP verified");
+                    document.getElementById("otp").disabled = true;
+                    document.getElementById("customer_id").disabled = true;
+                    document.getElementById("password").disabled = false;
+                    document.getElementById("confirm_password").disabled = false;
+                    document.getElementById("password_div").style.display = "block";
+                    document.getElementById("confirm_password_div").style.display = "block";
+
+                }
+                else{
+                    alert("error - check your otp");
+                    document.getElementById("password").disabled = true;
+                }
+            });
+        }
+
+        function submit(){
+            if(!validatePassword()) {
+                    return; 
+            }
+
+            if(!validateCustomerId()) {
+                    return; 
+            }
+
+            if(!validateOTP()) {
+                    return; 
+            }
+
+            let customer_id = document.getElementById("customer_id").value;
+            let confirm_password = document.getElementById("confirm_password").value;
+
+            let password = document.getElementById("password").value;
+
+            if(password != confirm_password){
+                alert("password and confirm password should be same");
+                return;
+            }
+
+            console.log(password);
+            let url = "http://localhost:8080/abc-bank/password";
+            let data = {
+                "customer_id": customer_id,
+                "password": password
+            }
+            let method = "put";
+            let response = sendRequest(url, data, method);
+            response.then(function(response){
+                let result = JSON.parse(response); // promise response
+                console.log(result);
+                if(result.status == 200){
+                    alert("Password changed");
+                    window.location.href = "http://localhost:8080/abc-bank/login";
+                }
+                else{
+                    alert("error - check your email");
+                    document.getElementById("otp").disabled = true;
+                    document.getElementById("customer_id").disabled = false;
+                    document.getElementById("password").disabled = true;
+                }
+            });
+        }
+
+
+
 
 
         function validatePassword() {
@@ -258,5 +334,4 @@
         }
 
     </script>
-
-</html>
+    </html>

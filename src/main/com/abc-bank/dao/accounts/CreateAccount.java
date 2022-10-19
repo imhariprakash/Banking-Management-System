@@ -31,7 +31,7 @@ public class CreateAccount {
         }
 
         try{
-            Connection conn = dao.Connection.Connection.getConnection("customers");
+            Connection conn = dao.connection.Connection.getConnection("customers");
             java.sql.PreparedStatement ps = conn.prepareStatement("INSERT INTO customers (cust_name, father_name, email, phone, aadhar, pan, address, pincode, dob) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
             ps.setString(1, cust_name);
             ps.setString(2, father_name);

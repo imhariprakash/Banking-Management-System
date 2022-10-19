@@ -109,6 +109,24 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>user-home</servlet-name>
+		<jsp-file>/view/user/home.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>user-home</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>user-transact</servlet-name>
+		<jsp-file>/view/user/transact.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>user-transact</servlet-name>
+		<url-pattern>/transaction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>admin_login_forgot_password</servlet-name>
 		<servlet-class>controller.admin.</servlet-class>
 	</servlet>
@@ -124,6 +142,33 @@
 	<servlet-mapping>
 		<servlet-name>adminLogin</servlet-name>
 		<url-pattern>/admin/login</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>user-logout</servlet-name>
+		<servlet-class>controller.user.Logout</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>user-logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>user-balance</servlet-name>
+		<jsp-file>/view/user/balance.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>user-balance</servlet-name>
+		<url-pattern>/user/balance</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>admin-logout</servlet-name>
+		<servlet-class>controller.admin.Logout</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin-logout</servlet-name>
+		<url-pattern>/admin/logout</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
@@ -160,6 +205,33 @@
 	<servlet-mapping>
 		<servlet-name>"email otp"</servlet-name>
 		<url-pattern>/otp-email</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>user-otp</servlet-name>
+		<servlet-class>controller.otp.SendUserOTP</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>user-otp</servlet-name>
+		<url-pattern>/user/otp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>user-verify-otp</servlet-name>
+		<servlet-class>controller.otp.VerifyUserOTP</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>user-verify-otp</servlet-name>
+		<url-pattern>/user/verify-otp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>user-transaction</servlet-name>
+		<servlet-class>controller.transaction.SendMoney</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>user-transaction</servlet-name>
+		<url-pattern>/user/transaction</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>

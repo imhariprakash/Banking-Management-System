@@ -6,7 +6,7 @@ public class Transaction {
     private Transaction() {
     } // private constructor
 
-    public static void transact(String from_account, String to_account, long amount, JsonObject response) {
+    public static void transact(String from_account, String to_account, long amount, String description, JsonObject response) {
         // update balance
         dao.transactions.UpdateBalance.subtractBalance(from_account, amount, response);
         if (response.get("status").getAsString().equals("500")) {
@@ -24,6 +24,10 @@ public class Transaction {
 
         // update credit
         dao.transactions.UpdateCredit.updateCredit(to_account, amount, "netbanking", uuid.toString(), response);
+
+        // update transaction
+
+        dao.transactions.UpdateTransactions.addTransaction(from_account, amount, uuid.toString(), "netbanking", description, response);
 
     }
 }

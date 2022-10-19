@@ -7,7 +7,7 @@ import java.sql.Connection;
 public class Login {
     public static boolean login(String username, String password, JsonObject response) {
         try{
-            Connection connection = dao.Connection.Connection.getConnection("employee");
+            Connection connection = dao.connection.Connection.getConnection("employee");
             java.sql.PreparedStatement preparedStatement = connection.prepareStatement("SELECT password FROM admin WHERE username = ?");
             preparedStatement.setString(1, username);
             java.sql.ResultSet resultSet = preparedStatement.executeQuery();

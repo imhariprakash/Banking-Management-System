@@ -10,15 +10,17 @@ public class GetEmail {
 
     public static String getEmail(String customer_id, JsonObject responseJson) {
         try{
-            Connection connection = dao.Connection.Connection.getConnection("customers");
+            Connection connection = dao.connection.Connection.getConnection("customers");
             java.sql.PreparedStatement preparedStatement = connection.prepareStatement("SELECT email FROM customers WHERE customer_id = ?");
             preparedStatement.setString(1, customer_id);
             java.sql.ResultSet resultSet = preparedStatement.executeQuery();
             if(resultSet.next()){
+                responseJson.addProperty("status", "200");
+                responseJson.addProperty("message", "Email found");
                 return resultSet.getString("email");
             }else{
                 responseJson.addProperty("status", "400");
-                responseJson.addProperty("message", "Invalid customer_id");
+                responseJson.addProperty("message", "Invalid customer_id - Customer not found");
                 return null;
             }
         }catch (Exception e){

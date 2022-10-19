@@ -1,6 +1,6 @@
 package dao.otp;
 
-import dao.Connection.Connection;
+import dao.connection.Connection;
 
 public class EmailOTP {
     private EmailOTP() {
@@ -54,7 +54,8 @@ public class EmailOTP {
     public static void updateDB(String email, int otp, java.sql.Timestamp time_verified){
         try{
             java.sql.Connection con = Connection.getConnection("otp");
-            String query = "INSERT INTO email_otp_log (email, otp, time_verified) VALUES (?, ?, ?)";
+            String time_created = getTimeCreated(email, otp);
+            String query = "UPDATE email_otp_log SET time_verified = ? WHERE email = ? AND otp = ? AND time_created = ?";
             java.sql.PreparedStatement ps = con.prepareStatement(query);
             ps.setString(1, email);
             ps.setInt(2, otp);
@@ -63,6 +64,23 @@ public class EmailOTP {
         }catch(Exception e){
             System.out.println(e);
         }
+    }
+
+    private static String getTimeCreated(String email, int otp) {
+        try{
+            java.sql.Connection con = Connection.getConnection("otp");
+            String query = "SELECT time_created FROM email_otp WHERE email = ? AND otp = ? ORDER BY time_created DESC LIMIT 1";
+            java.sql.PreparedStatement ps = con.prepareStatement(query);
+            ps.setString(1, email);
+            ps.setInt(2, otp);
+            java.sql.ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                return rs.getString("time_created");
+            }
+        }catch(Exception e){
+            System.out.println(e);
+        }
+        return null;
     }
 
     public static void deleteOTP(String email){

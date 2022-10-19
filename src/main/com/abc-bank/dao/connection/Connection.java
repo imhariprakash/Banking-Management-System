@@ -1,4 +1,4 @@
-package dao.Connection;
+package dao.connection;
 
 public class Connection {
     private Connection() {

@@ -1,6 +1,9 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -22,6 +25,10 @@
             .full-width{
                 width:100%;
                 height:100%;
+            }
+
+            .right-align{
+                margin-left: 1200px;
             }
         </style>
 

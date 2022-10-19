@@ -7,9 +7,9 @@
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         if((username != null && password != null) && Login.isVerifiedUser(username, password)){
-            session.setAttribute("customer_name", username);
+            session.setAttribute("customer_id", username);
             session.setAttribute("logged_time", System.currentTimeMillis());
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("/abc-bank/home");
         }
         else if((username != null || password != null) || (username == "" || password == "")){
             response.sendRedirect("/abc-bank/wrong-login-credentials");
@@ -119,11 +119,11 @@
             </form>
             <div>
                 <p class="center-text top-margin">Forgot <a
-                        href="forgot-password">Username / Password</a></p>
+                        href="/abc-bank/reset/password">Username / Password</a></p>
             </div>
             <div>
                 <p class="center-text top-margin">Don't have an account? <a
-                        href="register">Register</a></p>
+                        href="/abc-bank/register">Register</a></p>
             </div>
         </div>
     </body>
