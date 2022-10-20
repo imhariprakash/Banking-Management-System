@@ -64,6 +64,27 @@
     </head>
 
     <body class="body-color">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">ABC Bank</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav nav-fill">
+                    <a class="nav-item nav-link active" href="http://localhost:8080/abc-bank/home">Home </a>
+                    <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/transaction">Transaction</a>
+                    <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/atm">ATM</a>
+                    <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/login">Login</a>
+                    <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/register">Register</a>
+                    <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/application-status">Application Status</a>
+                </div>
+            </div>
+        </nav>
+
         <div class="center login-block-color padding">
 
             <div class="d-flex flex-column">

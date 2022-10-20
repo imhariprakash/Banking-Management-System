@@ -58,6 +58,7 @@ public class Pagination {
     }
 
     public static String getPagination(){
-        return("\"<div id=\\\"paging-first-datatable\\\"></div>\";");
+        //return("\"<div id=\\\"paging-first-datatable\\\"></div>\";");
+        return("");
     }
 }

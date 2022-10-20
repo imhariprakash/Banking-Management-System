@@ -47,10 +47,10 @@ public class GetHtml {
                 "            </button>\n" +
                 "            <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\n" +
                 "                <div class=\"navbar-nav nav-fill\">\n" +
-                "                    <a class=\"nav-item nav-link\" href=\"http://localhost:8080/abc-bank/home\">Home </a>\n" +
+                "                    <a class=\"nav-item nav-link active\" href=\"http://localhost:8080/abc-bank/home\">Home </a>\n" +
                 "                    <a class=\"nav-item nav-link\" href=\"http://localhost:8080/abc-bank/transaction\">Transaction</a>\n" +
                 "                    <a class=\"nav-item nav-link\" href=\"http://localhost:8080/abc-bank/atm\">ATM</a>\n" +
-                "                    <a class=\"nav-item nav-link active\" href=\"http://localhost:8080/abc-bank/login\">Login</a>\n" +
+                "                    <a class=\"nav-item nav-link\" href=\"http://localhost:8080/abc-bank/login\">Login</a>\n" +
                 "                    <a class=\"nav-item nav-link\" href=\"http://localhost:8080/abc-bank/register\">Register</a>\n" +
                 "                    <a class=\"nav-item nav-link\" href=\"http://localhost:8080/abc-bank/about\">Application Status</a>\n" +
                 "                </div>\n" +
@@ -88,5 +88,9 @@ public class GetHtml {
                 "            }"+
                 ""+
                 "        </style>");
+    }
+
+    public static String getBr(){
+        return("<br>");
     }
 }

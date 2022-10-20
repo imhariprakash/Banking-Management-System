@@ -8,8 +8,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class TransactionsLog extends HttpServlet {
-    private TransactionsLog() {
-    } // private constructor
+
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();

@@ -9,8 +9,20 @@ public class TableFormatter {
     }
 
     public static String getHeader(){
-        return("<thead><tr><th scope=\"col\">Date</th><th scope=\"col\">From</th><th scope=\"col\">To</th><th scope=\"col\">Source</th></tr><th scope=\"col\">Type</th><th scope=\"col\">Description</th><th scope=\"col\">Amount</th></thead>");
+        return("<thead>\n" +
+                "    <tr>\n" +
+                "      <th scope=\"col\">Date</th>\n" +
+                "      <th scope=\"col\">From</th>\n" +
+                "      <th scope=\"col\">To</th>\n" +
+                "      <th scope=\"col\">Source</th>\n" +
+                "      <th scope=\"col\">Type</th>\n" +
+                "      <th scope=\"col\">Description</th>\n" +
+                "      <th scope=\"col\">Amount</th>\n" +
+                "    </tr>\n" +
+                "</thead>");
     }
+
+
 
     public static String startBody(){
         return("<tbody>");

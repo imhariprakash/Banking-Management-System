@@ -88,7 +88,7 @@
 
     <script>
         function review_applications(){
-            window.location.location = "http://localhost:8080/abc-bank/admin/review";
+            window.location.href = "http://localhost:8080/abc-bank/admin/review";
         }
     </script>
 

@@ -371,7 +371,11 @@
 	
 	<servlet>
 		<servlet-name>transactions-log-view</servlet-name>
-		<servlet-class>controller.atm.TransactionsLog</servlet-class>
+		<servlet-class>controller.transaction.TransactionsLog</servlet-class>
 	</servlet>
+	<servlet-mapping>
+		<servlet-name>transactions-log-view</servlet-name>
+		<url-pattern>/user/transactions</url-pattern>
+	</servlet-mapping>
 	
 </web-app>
