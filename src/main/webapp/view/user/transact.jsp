@@ -157,6 +157,10 @@
 
 
         <script>
+
+            var flag = false;
+            var count = 0;
+
             $(document).ready(function() {
                 $(window).keydown(function(event){
                     if(event.keyCode == 13) {
@@ -220,6 +224,7 @@
                     console.log(result);
                     if(result.status == 200){
                         alert("OTP verified");
+                        flag = true;
                         document.getElementById("otpdiv").style.display = "block";
                         document.getElementById("otp").disabled = false;
                         document.getElementById("to").disabled = true;
@@ -230,6 +235,11 @@
                     }
                     else{
                         alert("error - check your otp");
+                        flag = false;
+                        count++;
+                        if(count == 3){
+                            window.location.href = "http://localhost:8080/abc-bank/logout";
+                        }
                     }
                 });
             }
@@ -246,6 +256,11 @@
                 }
 
                 if(!validateDescription()){
+                    return;
+                }
+
+                if(!flag){
+                    alert("Please verify OTP");
                     return;
                 }
 

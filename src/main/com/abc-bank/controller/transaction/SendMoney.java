@@ -25,6 +25,21 @@ public class SendMoney extends HttpServlet {
                 response.getWriter().println(jsonResponse);
                 return;
             }
+            if(!dao.utility.EnoughBalance.isEnough(from_account, Double.parseDouble(jsonRequest.get("amount").getAsString()))){
+                response.setStatus(400);
+                JsonObject jsonResponse = new JsonObject();
+                jsonResponse.addProperty("status", "400");
+                jsonResponse.addProperty("message", "You do not have enough balance");
+
+                String email = dao.utility.GetEmailFromAccountNumber.getEmail(from_account, jsonResponse);
+                String subject = "Insufficient Balance";
+                String message = "You do not have enough balance to send money";
+                model.mailings.Email.send(email, subject, message);
+
+                response.getWriter().println(jsonResponse);
+                return;
+            }
+
             jsonRequest.addProperty("from_account", from_account);
             JsonObject json = new JsonObject();
             model.transactions.Transaction.send(jsonRequest, json);

@@ -71,6 +71,8 @@
                 <div class="btn btn-success btn-lg center-text" onclick="atm()">ATM</div>
                 <div class="btn btn-success btn-lg center-text" onclick=change_password()>Change Password</div>
                 <div class="btn btn-success btn-lg center-text" onclick="transaction()">Online transaction</div>
+                <div class="btn btn-success btn-lg center-text" onclick="block()">Block card</div>
+                <div class="btn btn-success btn-lg center-text" onclick="unblock()">Unblock card</div>
                 <div class="btn btn-success btn-lg center-text" onclick="logout()">Log out</div>
             </div>
 
@@ -113,6 +115,16 @@
 
         function logout(){
             window.location.href = "http://localhost:8080/abc-bank/logout";
+        }
+
+        function block(){
+            alert("Card blocked successfully! - You can activate it from the home page");
+            window.location.href = "http://localhost:8080/abc-bank/atm/block";
+        }
+
+        function unblock(){
+            alert("Card unblocked successfully! - You can use it now");
+            window.location.href = "http://localhost:8080/abc-bank/atm/unblock";
         }
     </script>
 

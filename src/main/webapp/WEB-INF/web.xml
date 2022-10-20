@@ -261,4 +261,117 @@
 		<url-pattern>/verify-mobile-otp</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>atm</servlet-name>
+		<jsp-file>/view/atm/atm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>atm</servlet-name>
+		<url-pattern>/atm</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>atm-login</servlet-name>
+		<servlet-class>controller.atm.Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>atm-login</servlet-name>
+		<url-pattern>/atm/login</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>card-block</servlet-name>
+		<servlet-class>controller.atm.Block</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>card-block</servlet-name>
+		<url-pattern>/atm/block</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>card-unblock</servlet-name>
+		<servlet-class>controller.atm.UnBlock</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>card-unblock</servlet-name>
+		<url-pattern>/atm/unblock</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>pin-reset</servlet-name>
+		<servlet-class>controller.atm.ResetPin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>pin-reset</servlet-name>
+		<url-pattern>/atm/reset</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>pin-reset-jsp</servlet-name>
+		<jsp-file>/view/atm/reset.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>pin-reset-jsp</servlet-name>
+		<url-pattern>/atm/pin-reset</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>atm-self-deposit</servlet-name>
+		<servlet-class>controller.atm.SelfDeposit</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>atm-self-deposit</servlet-name>
+		<url-pattern>/atm/deposit/self</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>atm-self-deposit-jsp</servlet-name>
+		<jsp-file>/view/atm/self_deposit.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>atm-self-deposit-jsp</servlet-name>
+		<url-pattern>/atm/self-deposit</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>atm-other-deposit</servlet-name>
+		<servlet-class>controller.atm.OtherDeposit</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>atm-other-deposit</servlet-name>
+		<url-pattern>/atm/deposit/others</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>atm-other-deposit-jsp</servlet-name>
+		<jsp-file>/view/atm/other_deposit.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>atm-other-deposit-jsp</servlet-name>
+		<url-pattern>/atm/deposit-others</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>atm-withdraw</servlet-name>
+		<servlet-class>controller.atm.Withdraw</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>atm-withdraw</servlet-name>
+		<url-pattern>/atm/withdraw</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>atm-withdraw-jsp</servlet-name>
+		<jsp-file>/view/atm/withdraw.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>atm-withdraw-jsp</servlet-name>
+		<url-pattern>/atm/withdraw-self</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>transactions-log-view</servlet-name>
+		<servlet-class>controller.atm.TransactionsLog</servlet-class>
+	</servlet>
+	
 </web-app>

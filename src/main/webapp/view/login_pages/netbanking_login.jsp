@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
-<%@ page import="com.google.gson.JsonObject, com.google.gson.JsonParser, model.authentication.Login, javax.servlet.http.HttpSession" %>
+<%@ page import="com.google.gson.JsonObject, com.google.gson.JsonParser, model.authentication.Login, javax.servlet.http.HttpSession, model.mailings.Email, dao.utility.GetEmail" %>
 
 <%
     try{
@@ -9,6 +9,13 @@
         if((username != null && password != null) && Login.isVerifiedUser(username, password)){
             session.setAttribute("customer_id", username);
             session.setAttribute("logged_time", System.currentTimeMillis());
+
+            String email = GetEmail.getEmail(username, new JsonObject());
+            String subject = "Login Notification";
+            String body = "You have logged in to your account at " + new java.util.Date();
+
+            Email.send(email, subject, body);
+
             response.sendRedirect("/abc-bank/home");
         }
         else if((username != null || password != null) || (username == "" || password == "")){
