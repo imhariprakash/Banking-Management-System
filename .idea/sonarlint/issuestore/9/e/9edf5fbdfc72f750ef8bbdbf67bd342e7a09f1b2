@@ -1,0 +1,15 @@
+
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ë×³
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(½Üõ¦üÿÿÿÿ
+t
+java:S2293""YReplace the type specification in this constructor call with the diamond operator ("<>").(š´å±ıÿÿÿÿ
+R
+java:S1854("<Remove this useless assignment to local variable "response".(¯ë„—
+V	java:S125"<This block of commented-out lines of code should be removed.(‰ğù›ùÿÿÿÿ
+C
+java:S1481("-Remove this unused "response" local variable.(¯ë„—
+Q	java:S125)"<This block of commented-out lines of code should be removed.(æ¸ï‰
+X
+java:S1128"=Remove this unused import 'models.SendRequestMessageRouting'.(‘Ã…¢ùÿÿÿÿ

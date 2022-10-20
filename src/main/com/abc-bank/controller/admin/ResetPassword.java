@@ -7,9 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
 public class ResetPassword extends HttpServlet {
-    public void doPut(HttpServletRequest request, HttpServletResponse response){
+    public void doPut(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         HttpSession session = request.getSession();
         if(session.getAttribute("username") == null || (!session.getAttribute("username").equals("admin"))){
@@ -17,6 +18,8 @@ public class ResetPassword extends HttpServlet {
             JsonObject json = new JsonObject();
             json.addProperty("status", "401");
             json.addProperty("message", "Must be logged in as a super admin to reset password");
+            response.setContentType("application/json");
+            response.getWriter().println(json);// Handle an invalid JWT
             return;
         }
 

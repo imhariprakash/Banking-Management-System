@@ -4,18 +4,54 @@
 
 <%
     String username = (String) session.getAttribute("username");
-    JsonObject json = GetReviewForm.getReviewForm(username);
+    JsonObject json;
+    if(request.getParameter("email") == null){
+        json = GetReviewForm.getReviewForm(username);
+        if(json == null){
+            response.sendRedirect("http://localhost:8080/abc-bank/admin/review/all-done");
+        }
+    }else{
+        json = GetReviewForm.getReviewForm(username, request.getParameter("email"));
+        if(json == null){
+            response.sendRedirect("http://localhost:8080/abc-bank/admin/review/not-found");
+            return;
+        }
+    }
 
-    String aadhar = "'" + json.get("aadhar").getAsString() + "'";
-    String address = "'" + json.get("address").getAsString() + "'";
-    String cust_name = "'" + json.get("cust_name").getAsString() + "'";
-    String dob = "'" + json.get("dob").getAsString() + "'";
-    String email = "'" + json.get("email").getAsString() + "'";
-    String father_name = "'" + json.get("father_name").getAsString() + "'";
-    String notes = "'" + json.get("notes").getAsString() + "'";
-    String pan = "'" + json.get("pan").getAsString() + "'";
-    String phone = "'" + json.get("phone").getAsString() + "'";
-    String pincode = "'" + json.get("pincode").getAsString() + "'";
+    String aadhar;
+    String address;
+    String cust_name;
+    String dob;
+    String email;
+    String father_name;
+    String notes;
+    String pan;
+    String phone;
+    String pincode;
+
+    try{
+        aadhar = "'" + json.get("aadhar").getAsString() + "'";
+        address = "'" + json.get("address").getAsString() + "'";
+        cust_name = "'" + json.get("cust_name").getAsString() + "'";
+        dob = "'" + json.get("dob").getAsString() + "'";
+        email = "'" + json.get("email").getAsString() + "'";
+        father_name = "'" + json.get("father_name").getAsString() + "'";
+        notes = "'" + json.get("notes").getAsString() + "'";
+        pan = "'" + json.get("pan").getAsString() + "'";
+        phone = "'" + json.get("phone").getAsString() + "'";
+        pincode = "'" + json.get("pincode").getAsString() + "'";
+    }catch(Exception e){
+        aadhar = "";
+        address = "";
+        cust_name = "";
+        dob = "";
+        email = "";
+        father_name = "";
+        notes = "";
+        pan = "";
+        phone = "";
+        pincode = "";
+    }
 %>
 
 

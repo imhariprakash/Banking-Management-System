@@ -103,7 +103,7 @@
                     <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/atm">ATM</a>
                     <a class="nav-item nav-link active" href="http://localhost:8080/abc-bank/login">Login</a>
                     <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/register">Register</a>
-                    <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/about">Application Status</a>
+                    <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/application-status">Application Status</a>
                 </div>
             </div>
         </nav>

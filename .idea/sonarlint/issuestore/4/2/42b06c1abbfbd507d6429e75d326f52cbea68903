@@ -1,0 +1,10 @@
+
+^
+java:S1192"IDefine a constant instead of duplicating this literal "message" 10 times.(†ðÎ5
+c
+java:S1192"HDefine a constant instead of duplicating this literal "status" 10 times.(•ÏŽÆüÿÿÿÿ
+U
+java:S1161":Add the "@Override" annotation above this method signature(´È®‚ýÿÿÿÿ
+S	java:S106U"9Replace this use of System.out or System.err by a logger.(ôµÿ¾þÿÿÿÿ
+M
+java:S1128"7Remove this unused import 'com.google.gson.JsonParser'.(Œƒ¸Æ

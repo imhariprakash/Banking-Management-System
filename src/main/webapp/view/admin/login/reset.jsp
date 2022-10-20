@@ -51,7 +51,7 @@
 
             .customer_id{
                 display:inline;
-                width:70%;
+                width:90%;
                 margin-left:20px;
             }
 
@@ -90,36 +90,19 @@
             <h1 class="center-text">Password Reset</h1>
             <form onSubmit="return false;">
                 <div class=" top-margin">
-                    <input type="text" name="customer_id" id="customer_id"
-                        placeholder=" Customer ID" class="input-properties customer_id" required>
-                    <div class="btn btn-success btn-lg" onclick="sendEmail()">Verify</div>
+                    <input type="text" name="username" id="username"
+                        placeholder=" Admin username" class="input-properties customer_id" required>
                 </div>
 
-                <div class=" top-margin" style="display:none" id="otpdiv">
-                    <input type="text" name="otp" id="otp"
-                        placeholder=" OTP" class="input-properties customer_id" required>
-                    <div class="btn btn-success btn-lg" onclick="verifyOTP()">Send</div>
+                <div class=" top-margin" id="otpdiv">
+                    <input type="text" name="password" id="password"
+                        placeholder=" New password" class="input-properties customer_id" required>
                 </div>
 
-                <div class=" top-margin" style="display:none" id="password_div">
-                    <input type="password" name="password" id="password"
-                        placeholder=" Password" class="input-properties customer_id" required disabled>
-                </div>
-
-                <div class=" top-margin" style="display:none" id="confirm_password_div">
-                    <input type="password" name="confirm_password" id="confirm_password"
-                        placeholder=" Confirm Password" class="input-properties customer_id" required disabled>
-                </div>
-
-                <div class="btn btn-success btn-lg adjust-btn" onclick="submit()">Submit</div>
+                <div class="btn btn-success btn-lg adjust-btn" onclick="submit()">Reset</div>
             </form>
             <div>
-                <p class="center-text top-margin"><a
-                        href="/abc-bank/login">Already Have an account / Login</a></p>
-            </div>
-            <div>
-                <p class="center-text top-margin">Don't have an account? <a
-                        href="/abc-bank/register">Register</a></p>
+                <div class="btn btn-primary btn-lg adjust-btn" onclick="back()">Back</div>
             </div>
         </div>
     </body>
@@ -151,102 +134,22 @@
             });
         });
 
-        function sendEmail() {
-            if(!validateCustomerId()) {
-                    return;
-            }
-
-            var customer_id = document.getElementById("customer_id").value;
-
-            let url = "http://localhost:8080/abc-bank/password";
-
-            let data = {
-                "customer_id": customer_id
-            }
-
-            let method = "post";
-
-            let response = sendRequest(url, data, method);
-            response.then(function(response){
-                let result = JSON.parse(response); // promise response
-                console.log(result);
-                if(result.status == 200){
-                    alert("OTP sent to email");
-                    document.getElementById("otp").disabled = false;
-                    document.getElementById("customer_id").disabled = true;
-                    document.getElementById("otpdiv").style.display = "block";
-                }
-                else{
-                    alert("error - check your email");
-                    document.getElementById("otp").disabled = true;
-                    document.getElementById("customer_id").disabled = false;
-                }
-            });
-
-        }
-
-        function verifyOTP(){
-            if(!validateOTP()) {
-                    return;
-            }
-
-            let otp = document.getElementById("otp").value;
-            let customer_id = document.getElementById("customer_id").value;
-            let url = "http://localhost:8080/abc-bank/forgot-password/otp";
-            let data = {
-                "customer_id":customer_id,
-                "otp": otp
-            }
-            console.log(data);
-            let method = "post";
-            let response = sendRequest(url, data, method);
-            response.then(function(response){
-                let result = JSON.parse(response); // promise response
-                console.log(result);
-                if(result.status == 200){
-                    alert("OTP verified");
-                    document.getElementById("otp").disabled = true;
-                    document.getElementById("customer_id").disabled = true;
-                    document.getElementById("password").disabled = false;
-                    document.getElementById("confirm_password").disabled = false;
-                    document.getElementById("password_div").style.display = "block";
-                    document.getElementById("confirm_password_div").style.display = "block";
-
-                }
-                else{
-                    alert("error - check your otp");
-                    document.getElementById("password").disabled = true;
-                }
-            });
-        }
+        
+        
 
         function submit(){
-            if(!validatePassword()) {
-                    return;
-            }
+            
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
 
-            if(!validateCustomerId()) {
-                    return;
-            }
-
-            if(!validateOTP()) {
-                    return;
-            }
-
-            let customer_id = document.getElementById("customer_id").value;
-            let confirm_password = document.getElementById("confirm_password").value;
-
-            let password = document.getElementById("password").value;
-
-            if(password != confirm_password){
-                alert("password and confirm password should be same");
+            if(username == "" || password == ""){
+                alert("Please fill all the fields");
                 return;
             }
-
-            console.log(password);
-            let url = "http://localhost:8080/abc-bank/password";
+            
+            let url = "http://localhost:8080/abc-bank/login/admin/password-reset";
             let data = {
-                "customer_id": customer_id,
+                "username": username,
                 "password": password
             }
             let method = "put";
@@ -255,66 +158,20 @@
                 let result = JSON.parse(response); // promise response
                 console.log(result);
                 if(result.status == 200){
-                    alert("Password changed");
-                    window.location.href = "http://localhost:8080/abc-bank/login";
+                    let username = document.getElementById("username").value.trim();
+                    alert("Password changed for admin with id : " + username);
+                    window.location.href = "http://localhost:8080/abc-bank/admin/dashboard";
                 }
                 else{
-                    alert("error - check your email");
-                    document.getElementById("otp").disabled = true;
-                    document.getElementById("customer_id").disabled = false;
-                    document.getElementById("password").disabled = true;
+                    alert(result.message);
                 }
             });
         }
 
-
-
-
-
-        function validatePassword() {
-            var password = document.getElementById("password").value;
-            if(password == ""){
-                alert("Password cannot be empty");
-                return false;
-            }
-            else if(/^[a-zA-Z0-9-!*$]*$/.test(password) == false) {
-                alert("Password can only have alphanumeric characters and special characters like -!*$");
-                return false;
-            }
-            else if(password.length < 8){
-                alert("Password must be atleast 8 characters long");
-                return false;
-            }
-            else if(password.length > 20){
-                alert("Password cannot be more than 20 characters long");
-                return false;
-            }
-            return true;
+        function back(){
+            window.location.href = "http://localhost:8080/abc-bank/admin/dashboard";
         }
-
-        function validateOTP(){
-            let otp = document.getElementById("otp").value;
-            if(otp.length == 6){
-                return true;
-            }else if(!(/d{6}/.test(otp))){
-                alert("OTP must be 6 digits - only numbers");
-                return false;
-            }else{
-                alert("OTP should be 6 digits");
-                return false;
-            }
-        }
-
-        function validateCustomerId(){
-            var customerId = document.getElementById("customer_id").value;
-            if(customerId == ""){
-                alert("Please enter customer id");
-                return false;
-            }
-            else{
-                return /^[1-9]{1}[0-9]{9}$/.test(customerId);
-            }
-        }
+        
 
         function sendRequest(url, data, method){
             var myHeaders = new Headers();

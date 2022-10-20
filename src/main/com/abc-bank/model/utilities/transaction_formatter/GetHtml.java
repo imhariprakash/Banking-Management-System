@@ -79,11 +79,11 @@ public class GetHtml {
                 "                margin : 10px;"+
                 "            }"+
                 ""+
-                "            #inner {"+
+                "            .inner {"+
                 "                width: 50%;"+
                 "                position:relative;"+
                 "                top:100px;"+
-                "                left:270px;"+
+                "                left:370px;"+
                 "                margin: 0 auto;"+
                 "            }"+
                 ""+
@@ -92,5 +92,9 @@ public class GetHtml {
 
     public static String getBr(){
         return("<br>");
+    }
+
+    public static String getBackButton(){
+        return("<a href=\"http://localhost:8080/abc-bank/home\" class=\"btn btn-primary inner\">Back</a>");
     }
 }

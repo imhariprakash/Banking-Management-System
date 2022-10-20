@@ -64,6 +64,15 @@ public class BuildPage {
         // end div
         page += GetHtml.getEndDiv();
 
+        // back button at center
+        page += GetHtml.getBackButton();
+
+        // end body
+        page += GetHtml.getEndBody();
+
+        // end html
+        page += GetHtml.end();
+
 
 
         return model.utilities.PrettyPrintHtml.prettyPrint(page);

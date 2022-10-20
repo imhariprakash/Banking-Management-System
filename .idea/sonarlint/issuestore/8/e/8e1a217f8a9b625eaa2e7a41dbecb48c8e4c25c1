@@ -1,0 +1,9 @@
+
+^
+java:S1192"HDefine a constant instead of duplicating this literal "message" 3 times.(¦Õ‹´
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šµú·
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íµ×¨üÿÿÿÿ
+P
+java:S1161":Add the "@Override" annotation above this method signature(§œ×ä
+f
+java:S1989C"PHandle the following exception that could be thrown by "getWriter": IOException.(›ñóÓ

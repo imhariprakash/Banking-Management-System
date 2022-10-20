@@ -1,0 +1,5 @@
+
+m	java:S117	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×çÙ8æÅ‡¿0
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(öËƒï
+l
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œ£¨´8æÅ‡¿0

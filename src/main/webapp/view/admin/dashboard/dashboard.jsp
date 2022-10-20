@@ -2,9 +2,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <%
+    String username;
     try{
-        String username = session.getAttribute("username").toString();
+        username = session.getAttribute("username").toString();
     }catch(Exception e){
+        username = "User";
         response.sendRedirect("http://localhost:8080/abc-bank/");
     }
 %>
@@ -14,7 +16,7 @@
 <html lang="en">
 
     <head>
-        <title>Admin Dashboard</title>
+        <title>View Customer Details</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1,
@@ -58,16 +60,17 @@
     </head>
 
     <body class="body-color">
-        <h1 id="inner">Welcome User!</h1>
+        <h1 id="inner">View Customer Details</h1>
         <div class="center login-block-color padding">
 
             <div class="d-flex flex-column">
                 <div class="btn btn-success btn-lg center-text" onclick="review_applications()">Review Applications</div>
-                <div class="btn btn-success btn-lg center-text">View Applications</div>
-                <div class="btn btn-success btn-lg center-text">Review particular application</div>
-                <div class="btn btn-success btn-lg center-text">Change Password</div>
-                <div class="btn btn-success btn-lg center-text">View Customer Details</div>
-                <div class="btn btn-success btn-lg center-text">Log out</div>
+                <div class="btn btn-success btn-lg center-text" onclick="view()">View Applications</div>
+                <div class="btn btn-success btn-lg center-text" onclick="review_application()">Review particular application</div>
+                <div class="btn btn-success btn-lg center-text" onclick="reset()">Change admin Password</div>
+                <div class="btn btn-success btn-lg center-text" onclick="self()">Self change Password</div>
+                <div class="btn btn-success btn-lg center-text" onclick="cust()">View Customer Details</div>
+                <div class="btn btn-success btn-lg center-text" onclick="logout()">Log out</div>
             </div>
 
         </div>
@@ -89,6 +92,30 @@
     <script>
         function review_applications(){
             window.location.href = "http://localhost:8080/abc-bank/admin/review";
+        }
+
+        function review_application(){
+                    window.location.href = "http://localhost:8080/abc-bank/admin/review-particular";
+                }
+
+        function reset(){
+            window.location.href = "http://localhost:8080/abc-bank/admin/login/password-reset";
+        }
+
+        function self(){
+            window.location.href = "http://localhost:8080/abc-bank/admin/login/self/password-reset";
+        }
+
+        function logout(){
+            window.location.href = "http://localhost:8080/abc-bank/admin/logout";
+        }
+
+        function view(){
+            window.location.href = "http://localhost:8080/abc-bank/admin/view/applications";
+        }
+
+        function cust(){
+            window.location.href = "http://localhost:8080/abc-bank/admin/view-customer";
         }
     </script>
 

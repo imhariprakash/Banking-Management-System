@@ -1,0 +1,29 @@
+
+e
+java:S1192"HDefine a constant instead of duplicating this literal "pincode" 4 times.(†úèë8±şĞ£¿0
+h
+java:S1192"FDefine a constant instead of duplicating this literal "notes" 4 times.(Êç•üşÿÿÿÿ8²şĞ£¿0
+d
+java:S1192"HDefine a constant instead of duplicating this literal "address" 4 times.(ï¥i8²şĞ£¿0
+c
+java:S1192"FDefine a constant instead of duplicating this literal "phone" 4 times.(ì ¨ß8²şĞ£¿0
+i
+java:S1192"LDefine a constant instead of duplicating this literal "father_name" 4 times.(»ã±8²şĞ£¿0
+m
+java:S1192"KDefine a constant instead of duplicating this literal "applied_on" 4 times.(¦ò±™úÿÿÿÿ8²şĞ£¿0
+i
+java:S1192"GDefine a constant instead of duplicating this literal "aadhar" 4 times.(àş¡Ëûÿÿÿÿ8²şĞ£¿0
+g
+java:S1192"JDefine a constant instead of duplicating this literal "cust_name" 4 times.(¦ïª8²şĞ£¿0
+a
+java:S1192"FDefine a constant instead of duplicating this literal "email" 6 times.(—èÓüşÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙğÒ§
+m	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â ’“8²şĞ£¿0
+k
+java:S2095E"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ŠË³l8âşĞ£¿0
+l
+java:S20954"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¸Ù”õ8‹²Ñ£¿0
+d
+java:S2095 "OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ŠË³l
+e
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¸Ù”õ

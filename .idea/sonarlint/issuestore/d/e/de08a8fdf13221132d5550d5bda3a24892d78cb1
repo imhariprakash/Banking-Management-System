@@ -1,0 +1,10 @@
+
+g
+java:S1192"QDefine a constant instead of duplicating this literal "application/json" 3 times.(ªŞÃı
+]
+java:S1192"GDefine a constant instead of duplicating this literal "status" 3 times.(ƒÎ€Û
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İÑñ
+P
+java:S1161":Add the "@Override" annotation above this method signature(à»¢ü
+k
+java:S1989#"PHandle the following exception that could be thrown by "getWriter": IOException.(Ôğ¿Âøÿÿÿÿ

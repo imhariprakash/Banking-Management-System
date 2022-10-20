@@ -1,0 +1,11 @@
+
+^
+java:S1192"HDefine a constant instead of duplicating this literal "message" 4 times.(ŠØâ
+]
+java:S1192"GDefine a constant instead of duplicating this literal "status" 4 times.(ï·Ç¼
+j
+java:S2095$"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(—ŒÆîÿÿÿÿÿ
+e
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÍæŞ‘
+N	java:S106"9Replace this use of System.out or System.err by a logger.(‡éìÜ
+N	java:S1061"9Replace this use of System.out or System.err by a logger.(‡éìÜ

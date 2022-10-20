@@ -1,0 +1,16 @@
+
+]
+java:S1192."HDefine a constant instead of duplicating this literal "message" 4 times.(ıäÜ}
+]
+java:S1192-"GDefine a constant instead of duplicating this literal "status" 4 times.(ï·Ç¼
+e	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êw
+e	java:S117;"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êw
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ëÕõüúÿÿÿÿ
+e
+java:S2095G"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(–€›
+S	java:S1061"9Replace this use of System.out or System.err by a logger.(·ÏŸ»øÿÿÿÿ
+S	java:S1062"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ
+c	java:S1009"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿİ¥‚
+S	java:S106X"9Replace this use of System.out or System.err by a logger.(·ÏŸ»øÿÿÿÿ
+S	java:S106Y"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ

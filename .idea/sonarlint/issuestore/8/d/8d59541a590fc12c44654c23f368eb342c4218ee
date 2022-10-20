@@ -1,0 +1,17 @@
+
+g
+java:S1192"QDefine a constant instead of duplicating this literal "application/json" 6 times.(ªŞÃı
+c
+java:S1192#"HDefine a constant instead of duplicating this literal "message" 5 times.(Ú´·îÿÿÿÿÿ
+]
+java:S1192"GDefine a constant instead of duplicating this literal "status" 8 times.(ı™Ãó
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È¬¯´
+f	java:S1177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È¬¯´
+P
+java:S1161":Add the "@Override" annotation above this method signature(Öñ‹É
+T
+java:S18549"9Remove this useless assignment to local variable "email".(Ë²‡øÿÿÿÿ
+O
+java:S1161.":Add the "@Override" annotation above this method signature(€šë(
+E
+java:S14819"*Remove this unused "email" local variable.(Ë²‡øÿÿÿÿ

@@ -99,6 +99,25 @@
 		<url-pattern>/reset/password</url-pattern>
 	</servlet-mapping>
 	
+	
+	<servlet>
+		<servlet-name>admin_all_done</servlet-name>
+		<jsp-file>/view/admin/review/account/all_done.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin_all_done</servlet-name>
+		<url-pattern>/admin/review/all-done</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>admin_review_email_not_found</servlet-name>
+		<jsp-file>/view/admin/review/account/no_such_application.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin_review_email_not_found</servlet-name>
+		<url-pattern>/admin/review/not-found</url-pattern>
+	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>admin_login</servlet-name>
 		<jsp-file>/view/admin/login/login.jsp</jsp-file>
@@ -128,13 +147,50 @@
 	
 	<servlet>
 		<servlet-name>admin_login_forgot_password</servlet-name>
-		<servlet-class>controller.admin.</servlet-class>
+		<servlet-class>controller.admin.ResetPassword</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>admin_login_forgot_password</servlet-name>
-		<url-pattern>/login/admin/forgot-password</url-pattern>
+		<url-pattern>/login/admin/password-reset</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>admin_login_forgot_password_jsp</servlet-name>
+		<jsp-file>/view/admin/login/reset.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin_login_forgot_password_jsp</servlet-name>
+		<url-pattern>/admin/login/password-reset</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>admin_login_forgot_password-self</servlet-name>
+		<servlet-class>controller.admin.ResetSelfPassword</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin_login_forgot_password-self</servlet-name>
+		<url-pattern>/login/admin/self/password-reset</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>admin_login_forgot_password_jsp-self</servlet-name>
+		<jsp-file>/view/admin/login/self_reset.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin_login_forgot_password_jsp-self</servlet-name>
+		<url-pattern>/admin/login/self/password-reset</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>admin_review_particular_app</servlet-name>
+		<jsp-file>/view/admin/review/account/reviewParticularApplication.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>admin_review_particular_app</servlet-name>
+		<url-pattern>/admin/review-particular</url-pattern>
+	</servlet-mapping>
+	
+	admin/review-particular
 	<servlet>
 		<servlet-name>adminLogin</servlet-name>
 		<servlet-class>controller.admin.Login</servlet-class>
@@ -376,6 +432,33 @@
 	<servlet-mapping>
 		<servlet-name>transactions-log-view</servlet-name>
 		<url-pattern>/user/transactions</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>view applications</servlet-name>
+		<servlet-class>controller.admin.ViewApplications</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>view applications</servlet-name>
+		<url-pattern>/admin/view/applications</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>view customer details</servlet-name>
+		<servlet-class>controller.admin.ViewCustomerDetails</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>view customer details</servlet-name>
+		<url-pattern>/admin/view/customer</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>view customer details jsp</servlet-name>
+		<jsp-file>/view/admin/dashboard/view_customer.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>view customer details jsp</servlet-name>
+		<url-pattern>/admin/view-customer</url-pattern>
 	</servlet-mapping>
 	
 </web-app>

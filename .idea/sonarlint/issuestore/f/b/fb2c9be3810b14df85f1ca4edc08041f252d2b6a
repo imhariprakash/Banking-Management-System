@@ -1,0 +1,9 @@
+
+c
+java:S1192"HDefine a constant instead of duplicating this literal "message" 3 times.(¹Æ«üÿÿÿÿ
+b
+java:S1192"GDefine a constant instead of duplicating this literal "status" 4 times.(ëŠßÕùÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²Ä†Øúÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—á‹Äÿÿÿÿÿ
+P
+java:S1161":Add the "@Override" annotation above this method signature(à»¢ü

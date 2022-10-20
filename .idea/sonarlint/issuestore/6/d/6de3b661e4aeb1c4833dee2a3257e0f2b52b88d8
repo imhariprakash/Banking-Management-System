@@ -1,0 +1,22 @@
+
+h
+java:S1192"MDefine a constant instead of duplicating this literal "applications" 5 times.(ğ—æÅúÿÿÿÿ
+k	java:S117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şß÷€ıÿÿÿÿ
+k	java:S117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şß÷€ıÿÿÿÿ
+d
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(è¹ò9
+j
+java:S2095&"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(´ú…ÿÿÿÿÿ
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¨Í†ûûÿÿÿÿ
+e
+java:S20955"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¾Ä‹¾
+e
+java:S2095D"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(£ÎéÆ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(¥÷ü
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¬›Óüûÿÿÿÿ
+h	java:S100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şß÷€ıÿÿÿÿ
+S	java:S106."9Replace this use of System.out or System.err by a logger.(ÃÙæµüÿÿÿÿ
+N	java:S106<"9Replace this use of System.out or System.err by a logger.(–¿‡
+h	java:S100A"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º¸¼ïıÿÿÿÿ
+N	java:S106K"9Replace this use of System.out or System.err by a logger.(ÎÀ…ˆ

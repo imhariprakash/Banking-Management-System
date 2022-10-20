@@ -1,0 +1,14 @@
+
+d
+java:S1192"HDefine a constant instead of duplicating this literal "message" 3 times.(×¸ë8“ù¢¿0
+d
+java:S1192"GDefine a constant instead of duplicating this literal "status" 3 times.(à“¨“8“ù¢¿0
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óóã¡
+P
+java:S1161":Add the "@Override" annotation above this method signature(§œ×ä
+8
+java:S3626!"Remove this redundant jump.(ûÁİ…8È§¡¿0
+8
+java:S3626'"Remove this redundant jump.(ûÁİ…8™ù¢¿0
+k
+java:S1989-"PHandle the following exception that could be thrown by "getWriter": IOException.(”äèşøÿÿÿÿ

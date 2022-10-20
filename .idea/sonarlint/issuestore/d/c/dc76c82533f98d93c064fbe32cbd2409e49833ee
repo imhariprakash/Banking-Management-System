@@ -1,0 +1,25 @@
+
+f	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÊŽú
+e	java:S1179"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óœ»
+k	java:S117<"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿™¶Ëøÿÿÿÿ
+j
+java:S2095N"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÆèÑ„üÿÿÿÿ
+q
+java:S2095>"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÆèÑ„üÿÿÿÿ8•¹åþ¾0
+j
+java:S2095m"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÆèÑ„üÿÿÿÿ
+j
+java:S2095`"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÆèÑ„üÿÿÿÿ
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÆèÑ„üÿÿÿÿ
+q
+java:S2095)"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÆèÑ„üÿÿÿÿ8•¹åþ¾0
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÆèÑ„üÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿ
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿ
+S	java:S1064"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿ
+S	java:S106F"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿ
+S	java:S106W"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿ
+S	java:S106e"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿ
+Z	java:S106r"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿ8ž¹åþ¾0

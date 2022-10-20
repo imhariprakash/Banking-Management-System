@@ -1,0 +1,30 @@
+
+c
+java:S1192"HDefine a constant instead of duplicating this literal "message" 9 times.(Ø¶ÌŸüÿÿÿÿ
+†
+java:S1192F"pDefine a constant instead of duplicating this literal "Already applied - please wait for verification!" 4 times.(ŒË®Æ
+]
+java:S1192"GDefine a constant instead of duplicating this literal "status" 9 times.(¸õèş
+d
+java:S2095W"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ıŠÃK
+e
+java:S2095b"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(½µôÔ
+e
+java:S2095&"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ÿ¹úÙ
+j
+java:S20951"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ŠÜÿÿÿÿÿ
+e
+java:S2095A"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‡ÅÙ¾
+q
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.( ÕåŸıÿÿÿÿ8“±ÊÙ¾0
+e
+java:S2095L"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‹‹¸Á
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÛÀ öøÿÿÿÿ
+j
+java:S2095v"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.( ÕåŸıÿÿÿÿ
+U
+java:S1118	":Add a private constructor to hide the implicit public one.(Úû‚­şÿÿÿÿ
+c
+java:S1126y"AReplace this if-then-else statement by a single return statement.(òãã şÿÿÿÿ8›±ÊÙ¾0
+U	java:S106~"9Replace this use of System.out or System.err by a logger.(ğÈöò8æ¿ËÙ¾0
