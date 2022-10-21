@@ -13,8 +13,6 @@ h
 8src/main/com/abc-bank/dao/applications/Applications.java,6/d/6de3b661e4aeb1c4833dee2a3257e0f2b52b88d8
 p
 @src/main/com/abc-bank/controller/register/ApplicationStatus.java,4/2/42b06c1abbfbd507d6429e75d326f52cbea68903
-I
-src/main/webapp/index.jsp,8/e/8e6d3b70c9f5b02570779b0441540d45eceb0ded
 n
 >src/main/com/abc-bank/controller/reset_password/VerifyOTP.java,6/4/64954b1e1563dbf88bc0c10548a51bd31e332f77
 a
@@ -143,8 +141,6 @@ q
 Asrc/main/com/abc-bank/controller/transaction/TransactionsLog.java,d/9/d93e3b8da15870131a11db45d6c12d1e07bc00bf
 U
 %src/main/webapp/view/user/balance.jsp,1/6/1634b4e666418f3cd63b031906391b510c2d63b0
-R
-"src/main/webapp/view/user/home.jsp,4/2/4203f9e57a97b8c8049fbede8e887e1913025939
 X
 (src/main/webapp/view/register/status.jsp,d/8/d8d7f1c00144627c7c8f205f2ea6d429ef8b4469
 P
@@ -165,8 +161,6 @@ f
 6src/main/webapp/view/reset_password/reset_password.jsp,7/7/77287acc9203bd35a5fb045f455b11d500cfcc15
 m
 =src/main/com/abc-bank/controller/reset_password/Password.java,8/d/8d59541a590fc12c44654c23f368eb342c4218ee
-e
-5src/main/webapp/view/login_pages/netbanking_login.jsp,b/2/b2e75221d13c619f6d3ac751ebc4d10d9b20ca6f
 i
 9src/main/com/abc-bank/controller/admin/ResetPassword.java,2/a/2a08882c7812b8d89d2af67abe6105d9b7d69d5f
 d
@@ -223,7 +217,5 @@ i
 9src/main/com/abc-bank/dao/utility/GetCustomerDetails.java,1/3/1360eaf3bc8c9e7886f0a9f5782e21770241158d
 c
 3src/main/webapp/view/admin/review/account/review.js,e/4/e485b337261fdf23f7530a52bb06ab5b9df67832
-O
-src/main/webapp/WEB-INF/web.xml,2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392
 b
 2src/main/webapp/view/admin/dashboard/dashboard.jsp,c/7/c7f0100a5f79f6c17af24d3b74aa941030638e4b

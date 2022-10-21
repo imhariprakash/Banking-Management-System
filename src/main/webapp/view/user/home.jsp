@@ -76,7 +76,7 @@
                     <a class="nav-item nav-link active" href="http://localhost:8080/abc-bank/home">Home </a>
                     <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/transaction">Transaction</a>
                     <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/atm">ATM</a>
-                    <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/login">Login</a>
+                    <a class="nav-item nav-link disabled" href="http://localhost:8080/abc-bank/login" disabled>Login</a>
                     <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/register">Register</a>
                     <a class="nav-item nav-link" href="http://localhost:8080/abc-bank/application-status">Application Status</a>
                 </div>
@@ -87,6 +87,7 @@
         <div class="center login-block-color padding">
 
             <div class="d-flex flex-column">
+                <br><br><br><br>
                 <div class="btn btn-success btn-lg center-text" onclick="show_balance()">Show Balance</div>
                 <div class="btn btn-success btn-lg center-text" onclick="show_transactions()">Show Transactions</div>
                 <div class="btn btn-success btn-lg center-text" onclick="atm()">ATM</div>
