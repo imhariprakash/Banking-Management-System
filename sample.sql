@@ -229,7 +229,7 @@ CREATE TABLE mail_credentials(
 );
 
 INSERT INTO mail_credentials (email, password)
-VALUES ('abcbankcommunication@gmail.com', 'abccommunication');
+VALUES ('abcb@gmail.com', 'ab');
 
 
 CREATE TABLE twilio_credentials(
@@ -238,7 +238,7 @@ CREATE TABLE twilio_credentials(
 );
 
 INSERT INTO twilio_credentials (account_sid, auth_token)
-VALUES ('ACd55fb54100b85a5524c5fe26aaf05423', 'd20f23aea826ea572ef94f461b2c6d63');
+VALUES ('ACd55fb54126aaf05423', 'd20f261b2c6d63');
 
 
 */
